@@ -1,0 +1,39 @@
+\chapter{Needleman Wunsch}
+
+\section{Introduction}
+Direct comparison of two sequences based on the presence in both of the corresponding amino acids in an identical array is insufficient to establish the full genetic relationship between two proteins.
+Allowance for gaps multiplies the number of comparisons that can be made but introduces unnecessary and partial comparisons.
+
+\section{A general method for sequence comparison}
+The maximum match can be defined as the largest number of amino acids of one protein that can be matched with those of another protein while allowing for all possible deletions.
+It can be determined by representing in a matrix all possible pair combinations that can be constructed from the amino acid sequences of the protein being compared.
+So $A_j$ is the jth amino acids of protein $A$ and $B_i$ is the ith amino acids of protein $B$.
+$A_j$ are the columns and $B_i$ all the rows of the matrix $MAT$.
+Then $A_{ij}$ represent a pair combination with amino acids $A_j$ and $B_i$.
+Every possible comparison can be represented by pathway through the matrix.
+A pathway is signified by a line connecting cells of the array.
+Complete diagonals contain no gaps.
+A necessary pathway begins at a cell in the first column of row.
+Either $i$ or $j$ must increase by only one, while the other may increase by one or more, leading to the next cell in a pathway.
+This is repeated until $i$, $j$ or both reach their limiting value.
+Every partial or unnecessary pathway will be contained in at least one necessary pathway.
+The values in the matrix are computed as:
+
+$$MAT_{ij} = \max(MAT_{i-1, j-1} + \alpha\delta(A_j, B_i), MAT_{i-i, j} + d, MAT_{i,j-1} + d)$$
+
+Where $d$ is the penalty factor, a number subtracted for every gap made, may be defined as a barrier for allowing the gap.
+And $\alpha$ can be a function that can represent any theory with the significance of a pair of amino acids.
+No gap would be allowed in the operation unless the benefit from allowing that gap would exceed the barrier.
+This method can be expanded for allowing the comparison of $n$ sequences through and $n$-dimensional matrix.
+The maximum-match pathway can be obtained by beginning at the terminals of the sequences and proceeding towards the origin, first by adding to the value of each cell possessing indices $i=y-1$ and or $j = z-1$.
+The process is iterated until all cells in the matrix have been operated upon.
+Each cell in the outer row or column will contain the maximum number of matches that can be obtained by originating any pathway at that cell and the largest number in that row or column is equal to the maximum match.
+The cells of the array which contributed to the maximum match may be determined by recording the origin of the number that was added to each cell when the array was operated upon.
+
+\section{Evaluating the significance of the maximum match}
+To accomplish the estimate of if a result found differs significantly from a match between random sequences two sets of random sequences can be constructed, each one from the set of amino acid composition of each of the proteins.
+If the value found for the real proteins is significantly different the difference a function of of the sequences alone and not of the composition.
+
+\section{Cell values and weighting factors}
+Cells can be weighted in accordance with the maximum number of corresponding bases in codons of the represented amino acids, to make the comparison more accurate.
+Also the significance of the maximum match is enhanced by decreasing the weight of those pathways containing a large number of gaps through the penalty factor.

@@ -13,7 +13,6 @@ See this [Github gist](https://gist.github.com/giacThePhantom/e080a777782754542d
  - [ ] 05_FASTA.pdf
  - [ ] 06_BLAST.pdf
  - [ ] 07_How_to_BLAST.pdf
- - [ ] elective
 
 ### Elective
  - [ ] 01_Optimality_in_evolutionary_biology.pdf
