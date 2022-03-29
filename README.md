@@ -6,8 +6,8 @@ See this [Github gist](https://gist.github.com/giacThePhantom/e080a777782754542d
 
 ## TODO
 
- - [ ] 01_Needleman_Wunsch.pdf
- - [ ] 02_Smith_Waterman.pdf
+ - [x] 01_Needleman_Wunsch.pdf
+ - [x] 02_Smith_Waterman.pdf
  - [ ] 03_PAM.pdf
  - [ ] 04_BLOSUM.pdf
  - [ ] 05_FASTA.pdf

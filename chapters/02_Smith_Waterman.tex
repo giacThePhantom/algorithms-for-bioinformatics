@@ -1,1 +1,41 @@
 \chapter{Smith Watermann}
+
+\section{Introduction}
+The Smith Watermann algorithm extends the one of Needleman and Wunsch to find a pair of segment, one from each of two long sequences, such that there is no other pair of segments with greater similarity.
+This similarity measure allows for deletion and insertion of arbitrary length.
+
+\section{Algorithm}
+Consider two molecular sequences $A = a_1a_2\dots a_n$ and $B = b_1b_2\dots b_m$.
+Given a similarity $s(a,b)$ of elements of the sequence and $W_k$ the weight of deletions of length $k$, to find pairs of segments with high degrees of similarity, a matrix $H$ is set up such that:
+
+$$H_{k0} = H_{0l} = 0\qquad \forall 0\le k\le n\land 0\le l\le m$$
+
+$H_{ij}$ si the maximum similarity of two segments ending in $a_i$ and $b_j$.
+$H_{ij}$ is computed such that:
+
+$$H_{ij} = \max(H_{i-1, j-1} + s(a_i, b_j), \max\limits_{k\ge 1}(H_{i-k, j}-W_k), \max\limits_{l\ge 1}(H_{i, j-l}-W_k), 0)$$
+
+With $1\le i\le n$ and $1\le j\le m$.
+So $H_{ij}$ is:
+
+\begin{multicols}{2}
+	\begin{itemize}
+		\item $H_{i-1, j-1} + s(a_i, b_j)$ If $a_i$ and $b_j$ are associated.
+		\item $H_{i-k, j}-w_k$ if $a_i$ is at the end of a deletion of length $k$.
+		\item $H_{i-k, j}-W_l$ if $b_j$ is at the end of a deletion of length $l$.
+		\item $0$ is used to prevent calculated negative similarity, indicating no similarity up to $a_i$ and $b_j$.
+	\end{itemize}
+\end{multicols}
+
+The pair of segments with maximum similarity is found first by locating the maximum elemnt of $H$.
+The other elements are determined sequentially with a traceback procedure ending with an element of $H$ equal to $0$.
+This procedure other than identifying the elements produces their alignment.
+The parameters  where:
+
+$$s(a_i, b_j) = \begin{cases} 1 & a_i = b_j \\ 0 & a_i\neq b_j\end{cases}$$
+
+And
+
+$$W_k = \frac{1}{3}k$$
+
+This algorithm in particular allows for the alignment of sequences that contained both mismatches and internal deletions.
