@@ -13,6 +13,14 @@ See this [Github gist](https://gist.github.com/giacThePhantom/e080a777782754542d
  - [ ] 05_FASTA.pdf
  - [ ] 06_BLAST.pdf
  - [ ] 07_How_to_BLAST.pdf
+ - [ ] 08_Gapped_BLAST_and_PSI_BLAST.pdf
+ - [ ] 09_PSI_BLAST_Composition-Based_Statistics.pdf
+ - [ ] 10_CLUSTAL-W.pdf
+ - [ ] 11_T-COFFEE.pdf
+ - [ ] 12_Protein_profiles_with_HMMs.pdf
+ - [ ] 13_Fitch_and_Margoliash.pdf
+
+
 
 ### Elective
  - [ ] 01_Optimality_in_evolutionary_biology.pdf
