@@ -7,8 +7,11 @@
 \contentsline {chapter}{\numberline {2}Smith Watermann}{4}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Introduction}{4}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Algorithm}{4}{section.2.2}%
-\contentsline {chapter}{\numberline {3}PAM}{6}{chapter.3}%
-\contentsline {chapter}{\numberline {4}BLOSUM}{7}{chapter.4}%
-\contentsline {chapter}{\numberline {5}FASTA}{8}{chapter.5}%
-\contentsline {chapter}{\numberline {6}BLAST}{9}{chapter.6}%
-\contentsline {chapter}{\numberline {7}How to BLAST}{10}{chapter.7}%
+\contentsline {chapter}{\numberline {3}PAM - a model of evolutionary change in proteins}{6}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Accepted point mutation}{6}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Mutability of amino acids}{6}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Mutation probability matrix for the evolutionary distance of one PAM}{6}{section.3.3}%
+\contentsline {chapter}{\numberline {4}BLOSUM}{8}{chapter.4}%
+\contentsline {chapter}{\numberline {5}FASTA}{9}{chapter.5}%
+\contentsline {chapter}{\numberline {6}BLAST}{10}{chapter.6}%
+\contentsline {chapter}{\numberline {7}How to BLAST}{11}{chapter.7}%

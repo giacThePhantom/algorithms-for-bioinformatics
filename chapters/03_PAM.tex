@@ -1,1 +1,51 @@
-\chapter{PAM}
+\chapter{PAM - a model of evolutionary change in proteins}
+
+\section{Accepted point mutation}
+An accepted point mutation in a protein is a replacement of one amino acid by another accepted by natural selection.
+To be accepted the new amino acid usually must function in a similar way to the old one.
+The likelihood of amino acid $X$ replacing $Y$ is the same as $Y$ replacing $X$ is assumed the same because it depends on the product of the frequencies of occurrence and on their chemical and physical similarity.
+SO evolution is a vibration around given frequencies.
+
+\section{Mutability of amino acids}
+The relative mutability is the probability that each amino acid will change in a given small evolutionary intervall.
+To compute it the number of times that each amino acid has changed in an interval and the number of times that it has occurred in the sequences and thus has been subject to mutation.
+In calculating this number in for many trees, with sequences of different lengths and evolutionary distance is combined in relative mutabilities.
+Each relative mutability is a ration between the total number of changes on all branches of all protein trees considered and the total exposure of the amino acid to mutation, or the sum for all branches of its local frequency of occurrence multiplied by the total number of mutation per $100$ links of that branch.
+
+\section{Mutation probability matrix for the evolutionary distance of one PAM}
+The individual kind of mutations and the relative mutability of the amino acids can be combined into a mutation probability matrix in which $M_{ij}$ gives the probability that the amino acid in column $j$ will be replaced by the amino acid in row $i$ after a given evolutionary period.
+The non-diagonal elements are computed as:
+
+$$M_{ij} = \frac{\lambda m_jA_{ij}}{\sum\limits_iA_{ij}}$$
+
+Where:
+
+\begin{multicols}{2}
+	\begin{itemize}
+		\item $A_{ij}$ is an element of the accepted point mutation matrix.
+		\item $\lambda$ is a proportionality constant.
+		\item $m_j$ is the mutability of the $j$th amino acid.
+	\end{itemize}
+\end{multicols}
+
+The diagonal elements are:
+
+$$M_{jj} = 1-\lambda m_j$$
+
+The sum of all elements of each column or row is $1$.
+The probability of observing a change is proportional to the mutability of the amino acid in that place.
+The same proportionality constant $\lambda$ holds for all columns.
+$100\cdot\sum f_iM_{ij}$ gives the number of amino acids that will remain unchanged when a protein $100$ links long of average composition is exposed to the evolutionary change.
+This depends on $\lambda$.
+To change the evolutionary period the matrix is multiplied my itself $n$ times, and with $n \rightarrow \infty$ each column approaches the asymptotic amino acid composition.
+The percentage of amino acids that will be observed to change on the average in the interval are found by:
+
+$$100(1-\sum\limits_if_iM_{ij})$$
+
+The term of the relatedness odds matrix are:
+
+$$R_{ij} = \frac{M_{ij}}{f_i}$$
+
+Or the mutation probability of a change over the probability that $i$ will occur in the second sequence by chance.
+Each term of this matrix gives the probability of replacement per occurrence of $i$ per occurrence of $j$.
+Amino acids with score $>1$ replace each other more often as alternative in related sequences that in random sequences.
