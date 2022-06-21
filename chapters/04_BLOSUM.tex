@@ -1,1 +1,107 @@
 \chapter{BLOSUM}
+
+\section{Introduction}
+
+	\subsection{Abstrac}
+	The most used substitution matrix with scores for all possible exchanges of one amino acid is based on the Dayhoff model of evolutionary rates.
+	This work proposes a different approach from blocks of aligned sequence segments, leading to improvement in alignments and in searches.
+
+	\subsection{Introduction}
+	Sequence alignment of proteins provide important insights into gene and protein function.
+	There are different types of alignments:
+
+	\begin{multicols}{2}
+		\begin{itemize}
+			\item Global alignments of pairs related by common ancestry.
+			\item Multiple alignments of members of protein families.
+			\item Alignments made during data base searches to detect homology.
+		\end{itemize}
+	\end{multicols}
+
+	In each case a scoring scheme for estimating similarity is used.
+	The mutation data matrices of Dayhoff are considered the default in alignment and searching programs.
+	However the most common task is the detection of much more distant relationships, which are only inferred from substitution rates in the Dayhoff model.
+
+\section{Methods}
+
+	\subsection{Deriving a frequency table from a data base blocks}
+	Local alignments can be represented as ungapped blocks with each row a different protein segment and each column an aligned residue position.
+	Protomat can be used for obtaining a set of blocks given a group of related proteins.
+	Considering a single block representing a conserved region of a protein family, for a new member a set of score for matches and mismatches that best favours a correct alignment with each of the other segments in the block.
+	For each column of the block, the number of matches and mismatches of each type between the new sequence and every other are counted.
+	This is repeated for all columns of all blocks and the summed results are stored in a table.
+	The new sequence is then added to the group.
+	For another new sequence the procedure is repeated.
+	Doing so the table in the end will consist of counts of all possible amino acid pairs in a column.
+	Counts of all possible pairs in each column of each block in the data base are summed.
+	If a block has a width $w$ amino acids and a depth of $s$ sequences, contributes $ws\frac{(s-1)}{2}$ amino acids pairs to the count.
+	This results in a frequency table listing the number of times each of the different amino acid pairs occurs among the blocks.
+	This table is used to compute the odds ratio matrix between the observed frequencies and the expected one.
+
+	\subsection{Computing a logarithm of odds matrix}
+	Let the total number of amino acid pairs $i,j$ for each entry of the frequency table be $f-{ij}$.
+	Then the observed probability of occurrence for each $i,j$ pair is:
+
+	$$q_{ij} = \frac{f_{ij}}{\sum\limits_{i=1}^{20}\sum\limits_{j=1}^if_{iJ}}$$
+
+	The expected probability of occurrence for each pair is computed following the occurrence of the $ith$ amino acid in a $i,j$ pair:
+
+	$$p_i = q_{ii}+\sum\limits_{j\neq i}\frac{q_{ij}}{2}$$
+
+	The expected probability of occurrence $e_{ij}$ for each $i,j$ pair is then $p_ip_j$ for $i=j$ and $p_ip_j + p_jp_i = 2p_ip_j$ for $i\neq j$.
+	An odds ratio matrix is computed such that each entry is $\frac{q_{ij}}{e_{ij}}$.
+	A lod (logarithm of odds) is then calculated in bit units as $s = \log_2\big(\frac{q_{ij}}{e_{ij}}\big)$.
+	If the observed frequencies are as expected $s_{ij} = 0$, if less $s_{ij} < 0$< if more $s_{ij} > 0$/
+	Lod ratios are multiplied by a $2$ scaling factor and rounded to the nearest integer value to produce the block substitution matrix BLOSUM.
+	The relative entropy or the average mutual information per amino acid pair is computed:
+
+	$$ H = \sum\limits_{i=1}^{20}\sum\limits-{j=1}^i q_{ij}\times s_{ij}$$
+
+	And the expected score in bit units:
+
+	$$E = \sum\limits_{i=1}^{20}\sum\limits_{j=1}^i p_i\times p_j\times s_{ij}$$
+
+	\subsection{Clustering segments within blocks}
+	To reduce multiple contributions to amino acid pair frequencies from the most closely related members of a family, sequences are clustered within blocks and each cluster is weighted as a single sequence in counting pairs.
+	A clustering percentage in which sequence segments identical for at least that value are clustered is used.
+	The contribution of closely related segments to the frequency table is reduced.
+	Varying the clustering percentage leads to a family of matrices.
+
+	\subsection{Constructing blocks data bases}
+	Protomat was used to build the block data base from $504$ non redundant groups of proteins.
+	Protomat uses an amino acid substitution matrix at two phases.
+	THe motif program uses a substitution matrix when individual sequences are aligned against sequence segments containing a candidate motif.
+	The Motomat program uses a substitution matrix when a block is extended to either side of the motif region.
+	A unitary substitution matrix was used, next blosum was applied to the blocks and the resulting matrix was used to construct a second database.
+	Then blousm was applied to the second data base and the resulting matrix was used to construct version of blocks data base.
+	THe blosum program was applied to the final data base using a series of clustering percentages to obtain a family of lod substitution matrices.
+	Similar matrices were obtained using PAM.
+
+	\subsection{Alignments and homology searches}
+	Global multiple alignments were done using Multalin and to provide a positive matrix each entry was increased by $8$.
+	Pearson's RDF2 program was used to evaluate local pairwise alignments.
+	Homology searches were done using Blastp, Fasta and Ssearch.
+	The Swiss-Prot data bank was searched.
+	The first of the longest and most distance sequences in the group was used as a searching query, inferring distance from Protomat results.
+	The results of each search were analysed by considering the sequences used by Protomat to construct blocks for the protein group as the true positive sequences.
+	The number of misses is the nubmer of true positive sequences not reported for blastp.
+	For fasta and ssearch the empirical evaluation criteria of Pearson was used: the number of misses is the number of true positive scores which ranked below the $99.5$ percentile of the true negative scores.
+
+\section{Results}
+
+	\subsection{Comparison to Dayhoff matrices}
+	The blosum series based on percent clustering can be compared to the Dayhoff matrices using a measure of average information per residue pair in bit units or relative entropy, which is $0$ when the target distribution of pair frequencies is the same as the expected one and increases as they become more different.
+	In the Dayhoff matrices relative entropy decreased when increasing PAM, while in blosum it increased linearly when increasing clustering percentage.
+	Matrices with comparable relative entropy have similar expected scores.
+
+	\subsection{Performance in multiple alignment of known structures}
+	To test sequence alignment accuracy the results obtained to alignments seen in three dimensional structures was used.
+	A simultaneous multiple alignment program MSA was used as a standard.
+	Multalin, a hierarchical multiple alignment program performed worse using PAM matrices, while using blosum better.
+	Therefore blosum matrices produced accurate global alignments of these sequences.
+
+	\subsection{Performance in searching for homology in sequence data banks}
+	The number of misses when searching was averaged in order to assess the overall searching performance of different matrices using blast, fasta and smith-waterman.
+	Blosum matrices performed better than the best PAM matrix.
+	BLOSUM improved detection of members od this family.
+	The test was repeated with similar result of PAM for other protein families.
