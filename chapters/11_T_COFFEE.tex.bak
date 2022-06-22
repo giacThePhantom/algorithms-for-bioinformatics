@@ -18,13 +18,6 @@ Some methods attempt to carry out global alignments, where one tries to align th
 In principle, a method able to combine the best properties of global and local multiple alignments might be very powerful.
 This is the second motivation for T-Coffee: the design of a method that provides a simple, flexible and, most importantly, accurate solution to the problem of how to combine information of this sort.
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.5\linewidth]{1.png}
-\caption{Layout of the T-Coffee strategy; the main steps required to compute a multiple sequence alignment using the T-Coffee method. Square blocks designate procedures while rounded blocks indicate data structures.}
-\label{fig:structure}
-\end{figure}
-
 \section{T-Coffee Algorithm}
 T-Coffee (Tree-based Consistency Objective Function for alignment Evaluation) has two main features.
 \\
@@ -32,23 +25,13 @@ First, it provides a simple and flexible means of generating multiple alignments
 \\
 The main feature of T-Coffee is the \textbf{optimization} method, which is used to find the multiple alignment that best fits the pair-wise alignments in the input library. 
 A so-called \textbf{progressive strategy} is implemented, which is similar to that used in ClustalW. The difference from CustalW is that T-Coffe makes use of the information in the library to carry out progressive alignment in a manner that allows us to consider the alignments between all the pairs while we carry out each step of the progressive multiple alignment. 
-This gives us progressive alignment, with all its advantages of speed and simplicity, but with a far lesser tendency to make errors like the one shown in Figure \ref{fig:2}(a), i.e. misalignment of the word CAT.
+This gives us progressive alignment, with all its advantages of speed and simplicity, but with a far lesser tendency to make errors like the one shown in Figure 2(a), i.e. misalignment of the word CAT.
 T-Coffee is a progressive alignment with an ability to consider information from all of the sequences during each alignment step, not just those being aligned at that stage.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.8\linewidth]{2a.png}
-c\includegraphics[width=0.8\linewidth]{2b.png}
-\includegraphics[width=0.8\linewidth]{2c.png}
-\caption{The library extension. \textbf{(a) Progressive alignment}. Four sequences have been designed. The tree indicates the order in which the sequences are aligned when using a progressive method such as ClustalW. The resulting alignment is shown, with the word CAT misaligned. \textbf{(b) Primary library}. Each pair of sequences is aligned using ClustalW. In these alignments, each pair of aligned residues is associated with a weight equal to the average identity among matched residues within the complete alignment (mismatches are indicated in bold type). \textbf{(c) Library extension for a pair of sequences}. The three possible alignments of sequence A and B are shown (A and B, A and B through C, A and B through D). These alignments are combined, as explained in the text, to produce the position-specific library. This library is resolved by dynamic programming to give the correct alignment. The thickness of the lines indicates the strength of the weight.}
-\label{fig:2}
-\end{figure}
-
 
 \subsection{Generating a primary library of alignments}
 The primary library contains a set of pair-wise alignments between all of the sequences to be aligned.
 In the library, we include information on each of the $N(N - 1)/2$ sequence pairs, where $N$ is the number of sequences. Here, we use two alignment sources for each pair of sequences, one \textbf{local} and one \textbf{global}.
-The global alignments (Figures \ref{fig:structure} and \ref{fig:2}(b)) are constructed using ClustalW on the sequences, two at a time. The local alignments (Figure \ref{fig:structure}) are the ten top scoring non-intersecting local alignments, between each pair of sequences, gathered using the Lalign program.
+The global alignments (Figures 1 and 2(b)) are constructed using ClustalW on the sequences, two at a time. The local alignments (Figure 1) are the ten top scoring non-intersecting local alignments, between each pair of sequences, gathered using the Lalign program.
 \\
 In the library, each alignment is represented as a list of pair-wise residue matches (e.g. residue x of sequence A is aligned with residue y of sequence B). 
 In effect, each of these pairs is a constraint. 
@@ -57,8 +40,8 @@ All of these constraints are not equally important. Some may come from parts of 
 \subsection{Derivation of the primary library weights} \label{sub:weights}
 T-Coffee assigns a weight to each pair of aligned residues in the library (Figure 2(b)). 
 The \textbf{sequence identity} weighting scheme is used, which has been prove to be effective and of great simplicity. 
-Libraries are lists of weighted pair-wise constraints. Each constraint receives a weight equal to percent identity within the pair-wise alignment it comes from (Figure \ref{fig:2}(b)). 
-For each set of sequences, two primary libraries are computed along with their weights, one using ClustalW (global alignments; Figure \ref{fig:2}(b)) and the second using Lalign (local).
+Libraries are lists of weighted pair-wise constraints. Each constraint receives a weight equal to percent identity within the pair-wise alignment it comes from (Figure 2(b)). 
+For each set of sequences, two primary libraries are computed along with their weights, one using ClustalW (global alignments; Figure 2(b)) and the second using Lalign (local).
 
 \subsection{Combination of the libraries}
 The aim is the efficient combination of local and global alignment information.
@@ -75,12 +58,12 @@ This process is called library extension (subsection \ref{sub:extension}).
 \subsection{Extending the library} \label{sub:extension}
 Fitting a set of weighted constraints into a multiple alignment is a well known NP-complete problem.
 \\
-We circumvent the problem by using a heuristic algorithm that we call \textbf{library extension} (Figure \ref{fig:2}(c)). The idea is to combine information in such a manner that the final weight, for any pair of residues, reflects some of the information contained in the whole library. To do so, a \textbf{triplet approach} is used, as summarized in Figure \ref{fig:2}(c).
+We circumvent the problem by using a heuristic algorithm that we call \textbf{library extension} (Figure 2(c)). The idea is to combine information in such a manner that the final weight, for any pair of residues, reflects some of the information contained in the whole library. To do so, a \textbf{triplet approach} is used, as summarized in Figure 2(c).
 \\
 It is based on taking each aligned residue pair from the library and checking the alignment of the two residues with residues from the remaining sequences. 
 \subsubsection{A quick example}
 For instance, let us consider the four sequences A, B, C
-and D of Figure 2. Let us call A(G) the G of GARFIELD in sequence A, B(G) the equivalent G in sequence B and W(A(G), B(G)) the weight associated with this pair of symbols in the primary library. In the direct alignment of A and B, A(G) and B(G) are matched (Figure \ref{fig:2}(b) and (c)). Therefore, the initial weight for that pair of residues can be set to 88 (primary weight of the alignment of sequence A and B, which is the percent of identity of this pair). If we now look at the alignment of sequence A and sequence B through sequence C (Figure \ref{fig:2}(c)), we can see that the A(G) and C(G) are aligned, as well as C(G) and A(G). We conclude that there is an alignment of A(G) with B(G) through sequence C. We associate that alignment with a weight equal to the minimum of $W_1 = W(A(G), C(G))$ and $W_2 = W(C(G), B(G))$. Since $W_1 = 77$ and $W_2 = 100$, the resulting weight is set to 77. In the extended library, this new value is added to the previous one to give a total weight of 165 for the pair A(G), B(G). The complete extension will require an examination of all the remaining triplets. Not all of them bring information. For instance, the alignment of A and B through sequence D does not contain any information relative to A(G) or B(G), and, therefore, it has no influence on the weight associated with A(G) and B(G). In summary, the weight associated with a pair of residues will be the sum of all the weights gathered through the examination of all the triplets involving that pair.
+and D of Figure 2. Let us call A(G) the G of GARFIELD in sequence A, B(G) the equivalent G in sequence B and W(A(G), B(G)) the weight associated with this pair of symbols in the primary library. In the direct alignment of A and B, A(G) and B(G) are matched (Figure 2(b) and (c)). Therefore, the initial weight for that pair of residues can be set to 88 (primary weight of the alignment of sequence A and B, which is the percent of identity of this pair). If we now look at the alignment of sequence A and sequence B through sequence C (Figure 2(c)), we can see that the A(G) and C(G) are aligned, as well as C(G) and A(G). We conclude that there is an alignment of A(G) with B(G) through sequence C. We associate that alignment with a weight equal to the minimum of $W_1 = W(A(G), C(G))$ and $W_2 = W(C(G), B(G))$. Since $W_1 = 77$ and $W_2 = 100$, the resulting weight is set to 77. In the extended library, this new value is added to the previous one to give a total weight of 165 for the pair A(G), B(G). The complete extension will require an examination of all the remaining triplets. Not all of them bring information. For instance, the alignment of A and B through sequence D does not contain any information relative to A(G) or B(G), and, therefore, it has no influence on the weight associated with A(G) and B(G). In summary, the weight associated with a pair of residues will be the sum of all the weights gathered through the examination of all the triplets involving that pair.
 
 \subsubsection{Alignment}
 Weights will be zero for any residue pairs that never occur (this will be true of the majority of residue pairs). Otherwise, the weight will reflect a
@@ -91,7 +74,7 @@ This will allow an alignment to be carried out that will take account of the par
 \subsection{Progressive alignment strategy}
 The \textit{normal} progressive alignment strategy consists in creating a guide tree (a phylogenetic tree) using the neighbor-joining method. 
 The closest two sequences on the tree are aligned first using normal dynamic programming.
-This pair of sequences is then fixed and any gaps that have been introduced cannot be shifted later. Then the next closest two sequences are aligned or a sequence is added to the existing alignment of the first two sequences, depending which is suggested by the guide tree.
+This pair of sequences is then ®xed and any gaps that have been introduced cannot be shifted later. Then the next closest two sequences are aligned or a sequence is added to the existing alignment of the ®rst two sequences, depending which is suggested by the guide tree.
 
 As used here, the procedure does not require any additional parameters such as gap penalties. This stems, in part, from the fact that the substitution values (the library weights) were computed on alignments where such penalties had already been applied. Furthermore, high scoring segments that show consistency within the data set see their score enhanced by the extension to such a point that they become insensitive to gap penalties.
 
