@@ -1,0 +1,103 @@
+\graphicspath{{chapters/11/}}
+\chapter{T-COFFEE}
+\emph{T-Coffee: A Novel Method for Fast and Accurate Multiple Sequence Alignment}
+We describe a new method (T-Coffee) for multiple sequence alignment that provides a dramatic improvement in accuracy with a modest sacrifice in speed as compared to the most commonly used alternatives.
+\section{Introduction}
+The simultaneous alignment of three or more nucleotide or amino acid sequences is one of the commonest tasks in bioinformatics.
+Multiple alignments are an essential prerequisite to many analyses of protein families such as homology modeling or phylogenetic reconstruction, or to illustrate conserved and variable sites within a family.
+
+\subsection{Reasons for the development}
+\subsubsection{Once a gap, always a gap}
+The most commonly used heuristic methods are based on the \textbf{progressive alignment strategy}, with \textbf{ClustalW} being the most widely used implementation. 
+The idea is to take an initial, approximate, phylogenetic tree between the sequences and to gradually build up the alignment, following the order in the tree. Although successful, this method suffers from its greediness. 
+Errors made in the first alignments cannot be rectified later as the rest of the sequences are added in.
+Even though the paradigm ``once a gap always a gap'' remains true, misplacing gaps becomes much less likely.
+
+\subsubsection{Global and local alignment}
+Some methods attempt to carry out global alignments, where one tries to align the full lengths of the sequences with each other. Alternatively, one might wish to consider local similarity, as occurs when two proteins share only a domain or motif (Smith-Waterman, Lalign).
+In principle, a method able to combine the best properties of global and local multiple alignments might be very powerful.
+This is the second motivation for T-Coffee: the design of a method that provides a simple, flexible and, most importantly, accurate solution to the problem of how to combine information of this sort.
+
+\section{T-Coffee Algorithm}
+T-Coffee (Tree-based Consistency Objective Function for alignment Evaluation) has two main features.
+\\
+First, it provides a simple and flexible means of generating multiple alignments, using heterogeneous data sources. The data from these sources are provided to T-Coffee via a \textbf{library} of pair-wise alignments.
+\\
+The main feature of T-Coffee is the \textbf{optimization} method, which is used to find the multiple alignment that best fits the pair-wise alignments in the input library. 
+A so-called \textbf{progressive strategy} is implemented, which is similar to that used in ClustalW. The difference from CustalW is that T-Coffe makes use of the information in the library to carry out progressive alignment in a manner that allows us to consider the alignments between all the pairs while we carry out each step of the progressive multiple alignment. 
+This gives us progressive alignment, with all its advantages of speed and simplicity, but with a far lesser tendency to make errors like the one shown in Figure 2(a), i.e. misalignment of the word CAT.
+T-Coffee is a progressive alignment with an ability to consider information from all of the sequences during each alignment step, not just those being aligned at that stage.
+
+\subsection{Generating a primary library of alignments}
+The primary library contains a set of pair-wise alignments between all of the sequences to be aligned.
+In the library, we include information on each of the $N(N - 1)/2$ sequence pairs, where $N$ is the number of sequences. Here, we use two alignment sources for each pair of sequences, one \textbf{local} and one \textbf{global}.
+The global alignments (Figures 1 and 2(b)) are constructed using ClustalW on the sequences, two at a time. The local alignments (Figure 1) are the ten top scoring non-intersecting local alignments, between each pair of sequences, gathered using the Lalign program.
+\\
+In the library, each alignment is represented as a list of pair-wise residue matches (e.g. residue x of sequence A is aligned with residue y of sequence B). 
+In effect, each of these pairs is a constraint. 
+All of these constraints are not equally important. Some may come from parts of alignments that are more likely to be correct. This is taken into account when computing the multiple alignment and give priority to the most reliable residue pairs. This is achieved by using a weighting scheme, which is described in subsection \ref{sub:weights}.
+
+\subsection{Derivation of the primary library weights} \label{sub:weights}
+T-Coffee assigns a weight to each pair of aligned residues in the library (Figure 2(b)). 
+The \textbf{sequence identity} weighting scheme is used, which has been prove to be effective and of great simplicity. 
+Libraries are lists of weighted pair-wise constraints. Each constraint receives a weight equal to percent identity within the pair-wise alignment it comes from (Figure 2(b)). 
+For each set of sequences, two primary libraries are computed along with their weights, one using ClustalW (global alignments; Figure 2(b)) and the second using Lalign (local).
+
+\subsection{Combination of the libraries}
+The aim is the efficient combination of local and global alignment information.
+This is achieved by pooling the global and local primary libraries in a simple process of \textbf{addition}. 
+If any pair is duplicated between the two libraries, it is merged into a single entry that has a weight equal to the sum of the two weights. 
+Otherwise, a new entry is created for the pair being considered (process called unofficially "\textbf{stacking" of the signal}).
+Pairs of residues that did not occur are not represented (weight of zero).
+\\
+This primary library can be used directly to compute a multiple sequence alignment.  
+However, we enormously increase the value of the information in the library by examining the consistency of each pair of residues with residue pairs from all of the other alignments. 
+For each pair of aligned residues in the library, we can assign a weight that reflects the degree to which those residues align consistently with residues from all the other sequences. 
+This process is called library extension (subsection \ref{sub:extension}).
+
+\subsection{Extending the library} \label{sub:extension}
+Fitting a set of weighted constraints into a multiple alignment is a well known NP-complete problem.
+\\
+We circumvent the problem by using a heuristic algorithm that we call \textbf{library extension} (Figure 2(c)). The idea is to combine information in such a manner that the final weight, for any pair of residues, reflects some of the information contained in the whole library. To do so, a \textbf{triplet approach} is used, as summarized in Figure 2(c).
+\\
+It is based on taking each aligned residue pair from the library and checking the alignment of the two residues with residues from the remaining sequences. 
+\subsubsection{A quick example}
+For instance, let us consider the four sequences A, B, C
+and D of Figure 2. Let us call A(G) the G of GARFIELD in sequence A, B(G) the equivalent G in sequence B and W(A(G), B(G)) the weight associated with this pair of symbols in the primary library. In the direct alignment of A and B, A(G) and B(G) are matched (Figure 2(b) and (c)). Therefore, the initial weight for that pair of residues can be set to 88 (primary weight of the alignment of sequence A and B, which is the percent of identity of this pair). If we now look at the alignment of sequence A and sequence B through sequence C (Figure 2(c)), we can see that the A(G) and C(G) are aligned, as well as C(G) and A(G). We conclude that there is an alignment of A(G) with B(G) through sequence C. We associate that alignment with a weight equal to the minimum of $W_1 = W(A(G), C(G))$ and $W_2 = W(C(G), B(G))$. Since $W_1 = 77$ and $W_2 = 100$, the resulting weight is set to 77. In the extended library, this new value is added to the previous one to give a total weight of 165 for the pair A(G), B(G). The complete extension will require an examination of all the remaining triplets. Not all of them bring information. For instance, the alignment of A and B through sequence D does not contain any information relative to A(G) or B(G), and, therefore, it has no influence on the weight associated with A(G) and B(G). In summary, the weight associated with a pair of residues will be the sum of all the weights gathered through the examination of all the triplets involving that pair.
+
+\subsubsection{Alignment}
+Weights will be zero for any residue pairs that never occur (this will be true of the majority of residue pairs). Otherwise, the weight will reflect a
+combination of the similarity of the pair of sequences or sequence segments that the residue pair comes from and the consistency of that residue pair with all other residue pairs in the primary library. These scores can then be used to align any two sequences from our data set using conventional dynamic programming.
+When one normally aligns a pair of sequences, one uses a set of scores derived from some general table of amino acid weights such as a Blosum matrix. In our case, we can replace that matrix with a set of scores that are specific to every possible pair of residues in our two sequences.
+This will allow an alignment to be carried out that will take account of the particular residues in the two sequences but will also be guided towards consistency with all of the other sequences in the data set.
+
+\subsection{Progressive alignment strategy}
+The \textit{normal} progressive alignment strategy consists in creating a guide tree (a phylogenetic tree) using the neighbor-joining method. 
+The closest two sequences on the tree are aligned first using normal dynamic programming.
+This pair of sequences is then ®xed and any gaps that have been introduced cannot be shifted later. Then the next closest two sequences are aligned or a sequence is added to the existing alignment of the ®rst two sequences, depending which is suggested by the guide tree.
+
+As used here, the procedure does not require any additional parameters such as gap penalties. This stems, in part, from the fact that the substitution values (the library weights) were computed on alignments where such penalties had already been applied. Furthermore, high scoring segments that show consistency within the data set see their score enhanced by the extension to such a point that they become insensitive to gap penalties.
+
+\section{Biological validation}
+\textit{I chose not to report the comparisons with other tools and the complexity of the algorithm. If needed, exhaustive tabled can be found in the paper.}
+
+\subsection{Application to serine/threonine kinases}
+A major application of any alignment algorithm will be the delineation of motifs or domains.
+19 sequences from a sub-family of the serine/threonine kinases were provided. Each sequence in the alignment contains a nucleotide-binding site (NBS). 
+In all these sequences, the NBS is followed by a second conserved motif toward the C terminus.
+T-Coffee was able to accurately align 18 of the 19 NBSs, ClustalW was only able to correctly align 16 of these NBSs. The second motif is more difficult
+because of the long indel in st11 yeast. Here as well, T-Coffee can properly align 18 of the motifs, while ClustalW get 15 correct.
+As a result of combining local and global alignment information, T-Coffee managed to align almost all of the motifs as in the BaliBase reference alignment. Moreover, T-Coffee was the only program that correctly aligned the second motif of kp68 human, which is an interferon-induced kinase.
+
+
+
+
+
+
+
+
+
+
+
+
+
