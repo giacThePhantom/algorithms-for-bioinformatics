@@ -117,5 +117,16 @@
 \contentsline {subsection}{\numberline {13.3.4}Over-fitting and regularization}{41}{subsection.13.3.4}%
 \contentsline {section}{\numberline {13.4}Conclusions}{41}{section.13.4}%
 \contentsline {chapter}{\numberline {14}Construction of phylogenetic trees}{43}{chapter.14}%
-\contentsline {chapter}{\numberline {15}Toward defining the course of evolution: minimum change for a specific tree topology}{44}{chapter.15}%
-\contentsline {chapter}{\numberline {16}Evolutionary Trees from DNA Sequences: A Maximum Likelihood Approach}{45}{chapter.16}%
+\contentsline {section}{\numberline {14.1}What are phylogenetic trees}{43}{section.14.1}%
+\contentsline {section}{\numberline {14.2}Introduction}{43}{section.14.2}%
+\contentsline {subsection}{\numberline {14.2.1}Ancenstral genes, Orthologs and Paralogs}{44}{subsection.14.2.1}%
+\contentsline {subsection}{\numberline {14.2.2}Proteins or nucleic acids?}{44}{subsection.14.2.2}%
+\contentsline {section}{\numberline {14.3}Determining the mutation distance}{44}{section.14.3}%
+\contentsline {subsection}{\numberline {14.3.1}Genetic distances}{45}{subsection.14.3.1}%
+\contentsline {section}{\numberline {14.4}Testing alternative trees}{46}{section.14.4}%
+\contentsline {subsection}{\numberline {14.4.1}Standard deviation}{46}{subsection.14.4.1}%
+\contentsline {section}{\numberline {14.5}The statistically optimal tree}{46}{section.14.5}%
+\contentsline {section}{\numberline {14.6}Phylogenetic relationships in trees}{46}{section.14.6}%
+\contentsline {subsection}{\numberline {14.6.1}Fitch-Margoliash algorithm (FM)}{47}{subsection.14.6.1}%
+\contentsline {chapter}{\numberline {15}Toward defining the course of evolution: minimum change for a specific tree topology}{48}{chapter.15}%
+\contentsline {chapter}{\numberline {16}Evolutionary Trees from DNA Sequences: A Maximum Likelihood Approach}{49}{chapter.16}%
