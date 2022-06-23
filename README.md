@@ -26,7 +26,7 @@ See this [Github gist](https://gist.github.com/giacThePhantom/e080a777782754542d
 
 ### Elective
  - [ ] 01_Optimality_in_evolutionary_biology.pdf
- - [ ] 02_computing_exponentially_faster_implementing_non_deterministic_universal_Turing_machine_using_DNA.pdf
+ - [ ] 02_computing_exponentially_faster_implementing_non _deterministic_universal_Turing_machine_using_DNA.pdf
  - [ ] 03_Optimal_sequence_alingment_using_affine_gap_costs.pdf
  - [ ] 04_rapid_and_sensitive_protein_similarity_searches.pdf
  - [ ] 05_Faster_algorithm_computing_string_edit_distances.pdf
