@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.5.18)  23 JUN 2022 13:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.5.18)  23 JUN 2022 15:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -718,7 +718,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.40 ...pter}{\numberline {6}BLAST}{15}{chapter.6}
+l.40 ...ocal alignment search tool}{15}{chapter.6}
                                                   % [1
 
 ] [2])
@@ -757,19 +757,19 @@ Chapter 5.
 
 ]) (./chapters/06_BLAST.tex [14]
 Chapter 6.
-) (./chapters/07_How_to_BLAST.tex [15
+[15
 
-]
+] [16] [17] [18]) (./chapters/07_How_to_BLAST.tex [19]
 Chapter 7.
-) (./chapters/08_gapped_BLAST.tex [16
+) (./chapters/08_gapped_BLAST.tex [20
 
 ]
 Chapter 8.
-) (./chapters/09_PSI_BLAST.tex [17
+) (./chapters/09_PSI_BLAST.tex [21
 
 ]
 Chapter 9.
-) (./chapters/10_CLUSTAL_W.tex [18
+) (./chapters/10_CLUSTAL_W.tex [22
 
 ]
 Chapter 10.
@@ -778,61 +778,61 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--17
 
  []
 
-[19
+[23
 
-] [20]
+] [24]
 Overfull \hbox (31.24065pt too wide) detected at line 60
 \OML/cmm/m/it/10 GOP \OMS/cmsy/m/n/10 ! [] ^^C \OT1/cmr/m/n/10 ([]) \OMS/cmsy/m
 /n/10 ^^C \OT1/cmr/m/n/10 ([])
  []
 
-[21]) (./chapters/11_T_COFFEE.tex [22]
+[25]) (./chapters/11_T_COFFEE.tex [26]
 Chapter 11.
 
 Underfull \hbox (badness 10000) in paragraph at lines 8--21
 
  []
 
-[23
+[27
 
 ]
-<chapters/images//tcoffee.png, id=558, 319.1925pt x 434.5836pt>
+<chapters/images//tcoffee.png, id=660, 319.1925pt x 434.5836pt>
 File: chapters/images//tcoffee.png Graphic file (type png)
 <use chapters/images//tcoffee.png>
 Package pdftex.def Info: chapters/images//tcoffee.png  used on input line 29.
 (pdftex.def)             Requested size: 216.81pt x 295.188pt.
- [24 <./chapters/images//tcoffee.png>] [25]
+ [28 <./chapters/images//tcoffee.png>] [29]
 Underfull \hbox (badness 10000) in paragraph at lines 66--76
 
  []
 
-[26]
+[30]
 Chapter 12.
-<chapters/11//1.png, id=577, 716.6775pt x 962.59625pt>
+<chapters/11//1.png, id=678, 716.6775pt x 962.59625pt>
 File: chapters/11//1.png Graphic file (type png)
 <use chapters/11//1.png>
 Package pdftex.def Info: chapters/11//1.png  used on input line 100.
 (pdftex.def)             Requested size: 216.81pt x 291.20462pt.
-[27
+[31
 
 ]
-<chapters/11//2a.png, id=586, 1493.58pt x 449.68pt>
+<chapters/11//2a.png, id=688, 1493.58pt x 449.68pt>
 File: chapters/11//2a.png Graphic file (type png)
 <use chapters/11//2a.png>
 Package pdftex.def Info: chapters/11//2a.png  used on input line 117.
 (pdftex.def)             Requested size: 346.89731pt x 104.43973pt.
-<chapters/11//2b.png, id=587, 1450.41875pt x 317.185pt>
+<chapters/11//2b.png, id=689, 1450.41875pt x 317.185pt>
 File: chapters/11//2b.png Graphic file (type png)
 <use chapters/11//2b.png>
 Package pdftex.def Info: chapters/11//2b.png  used on input line 118.
 (pdftex.def)             Requested size: 346.89731pt x 75.85976pt.
-<chapters/11//2c.png, id=588, 1485.55pt x 596.2275pt>
+<chapters/11//2c.png, id=690, 1485.55pt x 596.2275pt>
 File: chapters/11//2c.png Graphic file (type png)
 <use chapters/11//2c.png>
 Package pdftex.def Info: chapters/11//2c.png  used on input line 119.
 (pdftex.def)             Requested size: 346.89731pt x 139.22191pt.
- [28 <./chapters/11//1.png>] [29 <./chapters/11//2a.png> <./chapters/11//2b.png
-> <./chapters/11//2c.png>] [30]) (./chapters/12_HMM.tex [31] [32]
+ [32 <./chapters/11//1.png>] [33 <./chapters/11//2a.png> <./chapters/11//2b.png
+> <./chapters/11//2c.png>] [34]) (./chapters/12_HMM.tex [35] [36]
 Chapter 13.
 
 Underfull \hbox (badness 10000) in paragraph at lines 5--23
@@ -844,14 +844,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--23
 
  []
 
-[33
+[37
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 25--33
 
  []
 
-<chapters/images//HMM.png, id=634, 1354.05875pt x 444.66125pt>
+<chapters/images//HMM.png, id=736, 1354.05875pt x 444.66125pt>
 File: chapters/images//HMM.png Graphic file (type png)
 <use chapters/images//HMM.png>
 Package pdftex.def Info: chapters/images//HMM.png  used on input line 36.
@@ -872,7 +872,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--45
 
  []
 
-[34 <./chapters/images//HMM.png>]
+[38 <./chapters/images//HMM.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 52--59
 
  []
@@ -882,14 +882,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 61--66
 
  []
 
-[35]
+[39]
 Overfull \hbox (26.99026pt too wide) detected at line 86
 [][][][]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s; []\OT1/cmr/m/n/10 ) = \OMS/cmsy/m/
 n/10 ^^@ [] [] []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s; [] \OMS/cmsy/m/n/10 j []\
 OT1/cmr/m/n/10 ) = \OMS/cmsy/m/n/10 ^^@ [] [] []
  []
 
-[36]
+[40]
 
 LaTeX Warning: Command \textquoteright invalid in math mode on input line 125.
 
@@ -908,33 +908,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 132--152
 
  []
 
-[37]) (./chapters/13_phylo_fm.tex [38]
+[41]) (./chapters/13_phylo_fm.tex [42]
 Chapter 14.
-) (./chapters/14_phylo_MP.tex [39
+) (./chapters/14_phylo_MP.tex [43
 
 ]
 Chapter 15.
-) (./chapters/15_phylo_ML.tex [40
+) (./chapters/15_phylo_ML.tex [44
 
 ]
 Chapter 16.
-) [41
+) [45
 
 ] (./build/principal.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `principal.out' has not changed.
-(rerunfilecheck)             Checksum: 5E9BE4A35BD4E75149301E04D2817320;15783.
+(rerunfilecheck)             Checksum: 0CA18B013BF8200C74F0E3F639F2F86E;18562.
  ) 
 Here is how much of TeX's memory you used:
- 16831 strings out of 478238
- 268343 string characters out of 5850456
- 596995 words of memory out of 5000000
- 34621 multiletter control sequences out of 15000+600000
+ 16877 strings out of 478238
+ 269097 string characters out of 5850456
+ 598007 words of memory out of 5000000
+ 34635 multiletter control sequences out of 15000+600000
  488498 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 65i,12n,66p,1573b,479s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 65i,12n,66p,1573b,504s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/t
 exmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public
@@ -953,10 +953,10 @@ exmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf-dist/fonts
 /type1/public/cm-super/sfrm0900.pfb></usr/share/texmf-dist/fonts/type1/public/c
 m-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm120
 0.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on ./build/principal.pdf (42 pages, 1039432 bytes).
+Output written on ./build/principal.pdf (46 pages, 1057193 bytes).
 PDF statistics:
- 815 PDF objects out of 1000 (max. 8388607)
- 710 compressed objects within 8 object streams
- 157 named destinations out of 1000 (max. 500000)
- 703 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 923 PDF objects out of 1000 (max. 8388607)
+ 813 compressed objects within 9 object streams
+ 189 named destinations out of 1000 (max. 500000)
+ 815 words of extra memory for PDF output out of 10000 (max. 10000000)
 
