@@ -9,7 +9,7 @@ See this [Github gist](https://gist.github.com/giacThePhantom/e080a777782754542d
  - [x] 01_Needleman_Wunsch.pdf
  - [x] 02_Smith_Waterman.pdf
  - [x] 03_PAM.pdf
- - [ ] 04_BLOSUM.pdf
+ - [x] 04_BLOSUM.pdf
  - [ ] 05_FASTA.pdf
  - [ ] 06_BLAST.pdf
  - [ ] 07_How_to_BLAST.pdf
