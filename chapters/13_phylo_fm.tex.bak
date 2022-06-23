@@ -11,7 +11,7 @@ Trees without root do not foresee evolutionary meanings in time terms and descri
 temporal order.
 \begin{figure}[H]
 		\centering
-		\includegraphics[width=0.5\textwidth]{grams.png}
+		\includegraphics[width=0.9\textwidth]{grams.png}
 		\caption{Topologies of phylogenetic trees}
 		\label{fig:1}
 	\end{figure}
@@ -64,7 +64,7 @@ The basic approach tot he construction of the tree is illustrated in figure \ref
 
 \begin{figure}[H]
 		\centering
-		\includegraphics[width=0.5\textwidth]{1.png}
+		\includegraphics[width=0.4\textwidth]{1.png}
 		\caption{Calculation of observed mutation distances. The upper apex represents a hypothetical ancestral organism that divided into two descending lines, one of which subsequently also divided. Thus we have three present-day species, A, B, C. The number of observable mutations that have occurred since the A and B lines of descent diverged are represented respectively by \textit{a} end \textit{b}. The number of mutations that separate the lower apex and C is represented by \textit{c}. The sums of $a+b, a+c, b+c$ then are the mutation distances of the three species as currently observed.}
 		\label{fig:1}
 	\end{figure}
@@ -73,12 +73,7 @@ The basic approach tot he construction of the tree is illustrated in figure \ref
 When information from more than three protein is utilized, the basic procedure is the same, except that initially each protein is assigned to its own subset. One then simply joins two subsets to create a single, more comprehensive subset, and the process is repeated until all proteins are members of  a single subset. 
 A phylogenetic tree is but a grphical representaion of the order in which the subsets were joined. 
 \\
-In the case of this study, they started with 20 subsets, each subset consisting of a single cytochrome \textit{c} amino acid sequence. One arbitrarily accepts, from among all the possible pairings examined, that assigned of protein subsets to sets A, B and C which provides the lowest average mutation distance from A to B. The leg lengths are then recorded. Henceforth the proteins of A and B so joined are treated as a single subset, and the entire procedure described in the preceding paragraph is repeated.  Thus the number of proteins\begin{figure}[H]
-		\centering
-		\includegraphics[width=0.5\textwidth]{1.png}
-		\caption{Calculation of observed mutation distances. The upper apex represents a hypothetical ancestral organism that divided into two descending lines, one of which subsequently also divided. Thus we have three present-day species, A, B, C. The number of observable mutations that have occurred since the A and B lines of descent diverged are represented respectively by \textit{a} end \textit{b}. The number of mutations that separate the lower apex and C is represented by \textit{c}. The sums of $a+b, a+c, b+c$ then are the mutation distances of the three species as currently observed.}
-		\label{fig:1}
-	\end{figure}  ($N$) is reduced by 1 at each cycle. The tree will be produced after $N-1$ joinings. 
+In the case of this study, they started with 20 subsets, each subset consisting of a single cytochrome \textit{c} amino acid sequence. One arbitrarily accepts, from among all the possible pairings examined, that assigned of protein subsets to sets A, B and C which provides the lowest average mutation distance from A to B. The leg lengths are then recorded. Henceforth the proteins of A and B so joined are treated as a single subset, and the entire procedure described in the preceding paragraph is repeated.  Thus the number of proteins($N$) is reduced by 1 at each cycle. The tree will be produced after $N-1$ joinings. 
 
 \subsection{Genetic distances}
 \emph{From slides, lec 13}
@@ -126,7 +121,7 @@ It starts from a theoretical tree in which the various OTUs are inserted, withou
 \subsection{Fitch-Margoliash algorithm (FM)}
 \begin{figure}[H]
 		\centering
-		\includegraphics[width=0.5\textwidth]{ex1.png}
+		\includegraphics[width=0.8\textwidth]{ex1.png}
 		\caption{}
 		\label{fig:ex1}
 	\end{figure}

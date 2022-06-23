@@ -106,4 +106,13 @@
 \BOOKMARK [1][-]{section.14.6}{Phylogenetic relationships in trees}{chapter.14}% 106
 \BOOKMARK [2][-]{subsection.14.6.1}{Fitch-Margoliash algorithm \(FM\)}{section.14.6}% 107
 \BOOKMARK [0][-]{chapter.15}{Toward defining the course of evolution: minimum change for a specific tree topology}{}% 108
-\BOOKMARK [0][-]{chapter.16}{Evolutionary Trees from DNA Sequences: A Maximum Likelihood Approach}{}% 109
+\BOOKMARK [1][-]{section.15.1}{Maximum parsimony principle}{chapter.15}% 109
+\BOOKMARK [2][-]{subsection.15.1.1}{Maximum parsimony method}{section.15.1}% 110
+\BOOKMARK [1][-]{section.15.2}{Introduction}{chapter.15}% 111
+\BOOKMARK [1][-]{section.15.3}{Method}{chapter.15}% 112
+\BOOKMARK [2][-]{subsection.15.3.1}{Assumptions}{section.15.3}% 113
+\BOOKMARK [2][-]{subsection.15.3.2}{Reconstruction of possible ancestral nucleotides-preliminary phase}{section.15.3}% 114
+\BOOKMARK [2][-]{subsection.15.3.3}{Reconstruction of possible ancestral nucleotides-final phase}{section.15.3}% 115
+\BOOKMARK [2][-]{subsection.15.3.4}{Permitted links between nucleotides in successive nodal sets}{section.15.3}% 116
+\BOOKMARK [2][-]{subsection.15.3.5}{"Probabilities associated with specific links}{section.15.3}% 117
+\BOOKMARK [0][-]{chapter.16}{Evolutionary Trees from DNA Sequences: A Maximum Likelihood Approach}{}% 118

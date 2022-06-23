@@ -129,4 +129,16 @@
 \contentsline {section}{\numberline {14.6}Phylogenetic relationships in trees}{46}{section.14.6}%
 \contentsline {subsection}{\numberline {14.6.1}Fitch-Margoliash algorithm (FM)}{47}{subsection.14.6.1}%
 \contentsline {chapter}{\numberline {15}Toward defining the course of evolution: minimum change for a specific tree topology}{48}{chapter.15}%
-\contentsline {chapter}{\numberline {16}Evolutionary Trees from DNA Sequences: A Maximum Likelihood Approach}{49}{chapter.16}%
+\contentsline {section}{\numberline {15.1}Maximum parsimony principle}{48}{section.15.1}%
+\contentsline {subsection}{\numberline {15.1.1}Maximum parsimony method}{48}{subsection.15.1.1}%
+\contentsline {section}{\numberline {15.2}Introduction}{49}{section.15.2}%
+\contentsline {section}{\numberline {15.3}Method}{49}{section.15.3}%
+\contentsline {subsection}{\numberline {15.3.1}Assumptions}{49}{subsection.15.3.1}%
+\contentsline {subsection}{\numberline {15.3.2}Reconstruction of possible ancestral nucleotides-preliminary phase}{50}{subsection.15.3.2}%
+\contentsline {subsection}{\numberline {15.3.3}Reconstruction of possible ancestral nucleotides-final phase}{51}{subsection.15.3.3}%
+\contentsline {subsubsection}{\numberline {15.3.3.1}The algorithm}{52}{subsubsection.15.3.3.1}%
+\contentsline {subsection}{\numberline {15.3.4}Permitted links between nucleotides in successive nodal sets}{52}{subsection.15.3.4}%
+\contentsline {subsection}{\numberline {15.3.5}"Probabilities associated with specific links}{53}{subsection.15.3.5}%
+\contentsline {subsubsection}{\numberline {15.3.5.1}The procedure for calculating "probabilities"}{54}{subsubsection.15.3.5.1}%
+\contentsline {paragraph}{\numberline {15.3.5.1.1}Notes}{55}{paragraph.15.3.5.1.1}%
+\contentsline {chapter}{\numberline {16}Evolutionary Trees from DNA Sequences: A Maximum Likelihood Approach}{56}{chapter.16}%
