@@ -10,7 +10,7 @@ Given a similarity $s(a,b)$ of elements of the sequence and $W_k$ the weight of 
 
 $$H_{k0} = H_{0l} = 0\qquad \forall 0\le k\le n\land 0\le l\le m$$
 
-$H_{ij}$ si the maximum similarity of two segments ending in $a_i$ and $b_j$.
+$H_{ij}$ is the maximum similarity of two segments ending in $a_i$ and $b_j$.
 $H_{ij}$ is computed such that:
 
 $$H_{ij} = \max(H_{i-1, j-1} + s(a_i, b_j), \max\limits_{k\ge 1}(H_{i-k, j}-W_k), \max\limits_{l\ge 1}(H_{i, j-l}-W_k), 0)$$
@@ -27,7 +27,7 @@ So $H_{ij}$ is:
 	\end{itemize}
 \end{multicols}
 
-The pair of segments with maximum similarity is found first by locating the maximum elemnt of $H$.
+The pair of segments with maximum similarity is found first by locating the maximum element of $H$.
 The other elements are determined sequentially with a traceback procedure ending with an element of $H$ equal to $0$.
 This procedure other than identifying the elements produces their alignment.
 The parameters  where:
