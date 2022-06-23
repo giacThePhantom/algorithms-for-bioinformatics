@@ -1,4 +1,4 @@
-# TITLE
+# Algorithms for bioinformatics
 Notes of the course of algorithms for bioinformatics of professor Blanzieri, QCB 2021-2022.
 
 ## Building
