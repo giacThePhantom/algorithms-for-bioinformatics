@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.5.18)  23 JUN 2022 15:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.5.18)  23 JUN 2022 15:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -598,25 +598,25 @@ LaTeX Warning: Label `eq:p_s_model' multiply defined.
 )
 \openout1 = `principal.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-Package hyperref Info: Link coloring OFF on input line 11.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+Package hyperref Info: Link coloring OFF on input line 17.
  (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -628,9 +628,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count324
 )
-LaTeX Info: Redefining \ref on input line 11.
-LaTeX Info: Redefining \pageref on input line 11.
-LaTeX Info: Redefining \nameref on input line 11.
+LaTeX Info: Redefining \ref on input line 17.
+LaTeX Info: Redefining \pageref on input line 17.
+LaTeX Info: Redefining \nameref on input line 17.
 
 (./build/principal.out) (./build/principal.out)
 \@outlinefile=\write3
@@ -699,13 +699,13 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 13.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 19.
 
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 13.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 19.
 
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -796,7 +796,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--21
 [27
 
 ]
-<chapters/images//tcoffee.png, id=660, 319.1925pt x 434.5836pt>
+<chapters/images//tcoffee.png, id=663, 319.1925pt x 434.5836pt>
 File: chapters/images//tcoffee.png Graphic file (type png)
 <use chapters/images//tcoffee.png>
 Package pdftex.def Info: chapters/images//tcoffee.png  used on input line 29.
@@ -808,7 +808,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 66--76
 
 [30]
 Chapter 12.
-<chapters/11//1.png, id=678, 716.6775pt x 962.59625pt>
+<chapters/11//1.png, id=681, 716.6775pt x 962.59625pt>
 File: chapters/11//1.png Graphic file (type png)
 <use chapters/11//1.png>
 Package pdftex.def Info: chapters/11//1.png  used on input line 100.
@@ -816,17 +816,17 @@ Package pdftex.def Info: chapters/11//1.png  used on input line 100.
 [31
 
 ]
-<chapters/11//2a.png, id=688, 1493.58pt x 449.68pt>
+<chapters/11//2a.png, id=691, 1493.58pt x 449.68pt>
 File: chapters/11//2a.png Graphic file (type png)
 <use chapters/11//2a.png>
 Package pdftex.def Info: chapters/11//2a.png  used on input line 117.
 (pdftex.def)             Requested size: 346.89731pt x 104.43973pt.
-<chapters/11//2b.png, id=689, 1450.41875pt x 317.185pt>
+<chapters/11//2b.png, id=692, 1450.41875pt x 317.185pt>
 File: chapters/11//2b.png Graphic file (type png)
 <use chapters/11//2b.png>
 Package pdftex.def Info: chapters/11//2b.png  used on input line 118.
 (pdftex.def)             Requested size: 346.89731pt x 75.85976pt.
-<chapters/11//2c.png, id=690, 1485.55pt x 596.2275pt>
+<chapters/11//2c.png, id=693, 1485.55pt x 596.2275pt>
 File: chapters/11//2c.png Graphic file (type png)
 <use chapters/11//2c.png>
 Package pdftex.def Info: chapters/11//2c.png  used on input line 119.
@@ -851,7 +851,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--33
 
  []
 
-<chapters/images//HMM.png, id=736, 1354.05875pt x 444.66125pt>
+<chapters/images//HMM.png, id=739, 1354.05875pt x 444.66125pt>
 File: chapters/images//HMM.png Graphic file (type png)
 <use chapters/images//HMM.png>
 Package pdftex.def Info: chapters/images//HMM.png  used on input line 36.
@@ -930,7 +930,7 @@ Package rerunfilecheck Info: File `principal.out' has not changed.
 Here is how much of TeX's memory you used:
  16877 strings out of 478238
  269097 string characters out of 5850456
- 598007 words of memory out of 5000000
+ 597252 words of memory out of 5000000
  34635 multiletter control sequences out of 15000+600000
  488498 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -953,10 +953,10 @@ exmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf-dist/fonts
 /type1/public/cm-super/sfrm0900.pfb></usr/share/texmf-dist/fonts/type1/public/c
 m-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm120
 0.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on ./build/principal.pdf (46 pages, 1057193 bytes).
+Output written on ./build/principal.pdf (46 pages, 1059962 bytes).
 PDF statistics:
- 923 PDF objects out of 1000 (max. 8388607)
- 813 compressed objects within 9 object streams
+ 926 PDF objects out of 1000 (max. 8388607)
+ 816 compressed objects within 9 object streams
  189 named destinations out of 1000 (max. 500000)
  815 words of extra memory for PDF output out of 10000 (max. 10000000)
 
