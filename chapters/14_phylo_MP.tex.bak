@@ -53,7 +53,7 @@ The assumptions are:
 \item any nucleotide may replace any other other nucleotide at any position. The word \textit{may} indicates that all logical options are to be considered, not denying however the possibility that selective forces may have an impact on some options.
 \end{itemize}
 
-Each position can have as a value the nucleotides A, C, G, or U or some combination of the,. Ambiguity can arise because of uncertainty of the codon (redundancy of the genetic code), or uncertainty about ancestral character states. An unknown position is represented by a set of letters. 
+Each position can have as a value the nucleotides A, C, G, or U or some combination of the,. Ambiguity can arise becuase of uncertainty of the codon (redundancy of the genetic code), or uncertainty about ancestral character states. An unknown position is represented by a set of letters. 
 \\
 The algorithm must be repeated for every nucleotide position in the gene. The reconstruction of the ancestral gene the follows two phases, the preliminary phase, in which nucleotides are placed on all ancestral nodes, and a final phase in which corrections to the preliminary assignments are made. 
 Finally, since not every possible link should be treated as equally representative of those events that did occur in the descent, "probabilities" are assigned to each link. 
@@ -71,7 +71,7 @@ The preliminary phase proceeds from the descendent character sets by formulating
 The formulation of each nodal set follows the simple rule: The preliminary nodal set shall be comprised of all characters (nucleotides) common to both immediately descendent sets; if none are common to both, then the preliminary nodal set will be comprised of all characters found in either. 
 In mathematical terms, the nodal set is the intersection of its immediately descendant sets if the intersection exists (i.e., is not empty) otherwise it is the union of those sets. An example is shown in figure \ref{fig:preliminary}a (on the left).
 \\
-Following the example in figure \ref{fig:preliminary}a: because there are so many different nucleotides in only 6 taxonomic units, many of the descendants have no nucleotides in common, with the result that the first (lowest) three preliminary nodal sets are formed by unions. At the penultimate node [4], the intersection $CU \cap AGU = U$ and so U is the preliminary nodal set. The ultimate node is once again a union. Note that with real amino acid sequences such as the cytochromes \textit{c}, the vast majority of the nodal sets are simpler in that they are formed by intersections of identical elements. 
+Following the example in figure \ref{fig:preliminary}a: because there are so many different nucleotides in only 6 taxonomic units, many of the descendants have no nucleotides in common, with the result that the first (lowest) three preliminary nodal sets are formed by unions. At the penultimate node [4], the intersection $CU \cap AGU = U$ and so U is the preliminary nodal set. The ultimate node is once again a union. Note that with real amino acid sequences such as the cytochromes c, the vast majority of the nodal sets are simpler in that they are formed by intersections of identical elements. 
 \\
 It should be noted that for every occasion that a union is required to form the preliminary nodal set, a mutation (nucleotide replacement) must have been fixed in this nucleotide position at some point during the evolution of this position. 
 
@@ -85,9 +85,9 @@ The necessity of a second phase arises from the deficiencies of the preliminary 
 		\label{fig:deficiencies}
 	\end{figure}
 
-IN figure \ref{fig:deficiencies}a the ambiguous AC represents an initial inability to decide whether the ancestral form was an A replaced by a C or vice versa. The only certainty is that one replacement is required. The only formulation that will permit the descendent positions to be accounted for in a single replacement requires that replacement from A to C. The elimination of C from the first node is determined by the \textit{rule of diminished ambiguity}. The rule is described in steps I and II of the algorithm. 
+IN figure \ref{fig:deficiencies}a the ambigous AC represents an initial inability to decide wether the ancestral form was an A replaced by a C or viceversa. The only certainity is that one replacement is required. The only formulation that will permit the descendent positions to be accounted for in a single replacemnt requires that replacement from A to C. The elimination of C from the first node is determined by the \textit{rule of diminished ambiguity}. The rule is described in steps I and II of the algoriithm. 
 \\
-Figure \ref{fig:deficiencies}d shows an equally adequate solution to that of \ref{fig:deficiencies}c. The fact that G is an valid alternative for the first node in encompassed by the \textit{rule of expanded ambiguity}, which is described in steps III and IV. 
+Figure \ref{fig:deficiencies}d shows an equally adequate solution to that of \ref{fig:deficiencies}c. The fact that G is an valid alternative for the firts node in ecnsompassed by the \textit{rule of expandend ambiguity}, which is described in steps III and IV. 
 \\
 In Figure 2e (lower left) is shown a third preliminary phase reconstruction that accounts for four descendants using two replacements. Figure \ref{fig:deficiencies}f is a valid alternative. Indeed, the C at the lowest node is a valid alternative to A if and only if a C is allowed at the penultimate node above. Two nodes contain a nucleotide not present in the intervening node because of the intersection process. Hence this is called the \textit{rule of encompassing ambiguity}, described in step V.
 
@@ -97,14 +97,14 @@ In Figure 2e (lower left) is shown a third preliminary phase reconstruction that
 \item \textbf{II}: Eliminate all nucleotides from the preliminary nodal set that are not present in the final nodal set of its immediate ancestor and go to VI.
 \item  \textbf{III}: If the preliminary nodal sey was formed by a union of its descendant sets go to IV, otherwise V.
 \item \textbf{IV}: Add to the preliminary nodal set any nucleotides in the final set of its immediate ancestor that are not present in the preliminary nodal set and go to solution which is not encompassed by the VI.
-\item \textbf{V}: Add to the preliminary nodal set any nucleotides not already present provided that they are present in both the final set of the immediate ancestor and in at least one of the two immediately descendent preliminary sets and go to VI.
+\item \textbf{V}: Add to the preliminary nodal set any nucleotides not already present provided that they are present in both the final set of the immediate ancestor and in at least one of the two immedately descendent preliminary sets and go to VI.
 \item \textbf{VI}: The preliminary nodal set being examined is now final. Descend one node as long as any preliminary nodal sets remain and return to I above.
 \end{itemize}
 
 Figure \ref{fig:intro} shows the operation of the algorithm. 
 
 \subsection{Permitted links between nucleotides in successive nodal sets}
-Figure \ref{fig:temporal} is a redrawing of the ancestral nodes of figure \ref{fig:intro}b with links connecting those nucleotides that comprise valid lines of descent in a most parsimonious tree. The arrowheads are on the internodal links that involve a change of nucleotide. 
+Figure \ref{fig:temporal} is a redrawing of the ancestral mnodes of figure \ref{fig:intro}b with links connecting thos nucleotides that comprise valid lines of descent in a most parsimonious tree. The arrrowheads are on the internodal links that involve a change of nucleotide. 
 
 \begin{figure}[H]
 		\centering
@@ -119,7 +119,7 @@ one or both immediate descendants are not other ancestral nodes. Since node 4 ha
 In figure \ref{fig:temporal} a complete phylogeny will require a network composed of one nucleotide from every node using only the links shown. Such a complete linkage will involve nucleotides with subscripts and possibly links bearing arrowheads. The sum of the arrowheads plus subscripts on any complete valid linkage is 4, the minimum number of replacements required to account for the data.
 \\
 How does one discover all the possible linkages like in figure \ref{fig:temporal}? 
-First, the nucleotides without parentheses were placed in the nodal set during the preliminary phase, while those with parenthesis during the final phase. Such nucleotides will be represented as $N_i$ and $(N_i)$, where the subscript denotes one of the four nucleotides.
+First, the nucleotides without parentheses were placed in the nodal set during the preliminary phase, while those with parenthesis during the final pahse. Such nucleotides will be represented as $N_i$ and $(N_i)$, where the subscript denotes one of the four nucleotides.
 An arrow is used to denote descent from an ancestor tot he next node.  Thus $(N_i) \rightarrow N_j$ means that an ancestral nucleotide that was added to a nodal set during the final phase of reconstruction is replaced (since $i \neq j$) by a nucleotide that was originally assigned to the descendant nodal set in the preliminary phase. An example is $(A) \rightarrow (C)$ in figure \ref{fig:temporal}.
 \\
 The rules are then as follows: given that a particular ancestral nucleotide is i, 
@@ -145,9 +145,9 @@ A caveat is necessary. In real world descendent sequences, there will be events 
 Assumption: all permitted nucleotides for the ultimate ancestor are equiprobable (i.e., in figure \ref{fig:prob} $P(^5 A) = P(^5 U) = 0.5)$. 
 This is to tackle the bias in favor of the predominating nucleotide in the line descending from the ultimate ancestor that has the fewest bifurcations. This bias comes from the assumption that all possible valid sets of complete linkages are equiprobable.
 \\
-Our assumption also assumes that every valid link from a given nodal nucleotide, $L(^k N)$, is equiprobable. Thus, the probability that a link is correct is $P[L(^k N)] = P(^k N) / n$, where $n$ is the number of links descending from $^k N$.
+Our assumption also assumes that every valid link froma given nodal nucleotide, $L(^k N)$, is equiprobable. Thus, the probability that a link is correct is $P[L(^k N)] = P(^k N) / n$, where $n$ is the number of links descending from $^k N$.
 \\
-In figure \ref{fig:prob} the dotted lines are the probabilities associated with every link and every nodal nucleotide shown in figure \ref{fig:temporal}. 
+In figure \ref{fig:prob} the dotted lines are the probabilities associated with every link and every noal nucleotide shown in figure \ref{fig:temporal}. 
 
 \paragraph{Notes}
 	If you want to have a look at the algorithm step by step, take a look at the slides of lecture 14. 
