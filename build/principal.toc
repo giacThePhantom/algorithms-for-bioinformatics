@@ -65,90 +65,98 @@
 \contentsline {subsubsection}{\numberline {6.3.2.5}Trade-off between accuracy and speed}{20}{subsubsection.6.3.2.5}%
 \contentsline {subsection}{\numberline {6.3.3}Performance of BLAST with homologous sequences}{20}{subsection.6.3.3}%
 \contentsline {subsection}{\numberline {6.3.4}Comparison of two long DNA sequences}{20}{subsection.6.3.4}%
-\contentsline {chapter}{\numberline {7}How to BLAST}{21}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Gapped BLAST and PSI BLAST}{22}{chapter.8}%
-\contentsline {chapter}{\numberline {9}PSI BLAST Composition-Based Statistics}{23}{chapter.9}%
-\contentsline {chapter}{\numberline {10}CLUSTAL-W}{24}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Introduction}{24}{section.10.1}%
-\contentsline {subsection}{\numberline {10.1.1}Local minimum problem}{24}{subsection.10.1.1}%
-\contentsline {subsection}{\numberline {10.1.2}The choice of alignment parameters}{24}{subsection.10.1.2}%
-\contentsline {section}{\numberline {10.2}Alignment method}{25}{section.10.2}%
-\contentsline {subsection}{\numberline {10.2.1}The distance matrix}{25}{subsection.10.2.1}%
-\contentsline {subsection}{\numberline {10.2.2}The guide tree}{25}{subsection.10.2.2}%
-\contentsline {subsection}{\numberline {10.2.3}Progressive alignment}{25}{subsection.10.2.3}%
-\contentsline {section}{\numberline {10.3}Improvements to progressive alignment}{25}{section.10.3}%
-\contentsline {subsection}{\numberline {10.3.1}Sequence weighting}{26}{subsection.10.3.1}%
-\contentsline {subsection}{\numberline {10.3.2}Gap penalties}{26}{subsection.10.3.2}%
-\contentsline {subsection}{\numberline {10.3.3}Weight matrices}{27}{subsection.10.3.3}%
-\contentsline {subsection}{\numberline {10.3.4}Divergent sequences}{27}{subsection.10.3.4}%
-\contentsline {section}{\numberline {10.4}Discussion}{27}{section.10.4}%
-\contentsline {chapter}{\numberline {11}T-COFFEE - ELISA}{28}{chapter.11}%
-\contentsline {section}{\numberline {11.1}Introduction}{28}{section.11.1}%
-\contentsline {section}{\numberline {11.2}T-Coffee Algorithm}{29}{section.11.2}%
-\contentsline {subsection}{\numberline {11.2.1}Generating a primary library of alignments}{29}{subsection.11.2.1}%
-\contentsline {subsection}{\numberline {11.2.2}Derivation of the primary library weights}{30}{subsection.11.2.2}%
-\contentsline {subsection}{\numberline {11.2.3}Combination of the libraries}{30}{subsection.11.2.3}%
-\contentsline {subsection}{\numberline {11.2.4}Extending the library}{30}{subsection.11.2.4}%
-\contentsline {subsection}{\numberline {11.2.5}Progressive alignment strategy}{31}{subsection.11.2.5}%
-\contentsline {section}{\numberline {11.3}Discussion}{31}{section.11.3}%
-\contentsline {chapter}{\numberline {12}T-COFFEE - ILARIA}{32}{chapter.12}%
-\contentsline {section}{\numberline {12.1}Introduction}{32}{section.12.1}%
-\contentsline {subsection}{\numberline {12.1.1}Reasons for the development}{32}{subsection.12.1.1}%
-\contentsline {subsubsection}{\numberline {12.1.1.1}Once a gap, always a gap}{32}{subsubsection.12.1.1.1}%
-\contentsline {subsubsection}{\numberline {12.1.1.2}Global and local alignment}{32}{subsubsection.12.1.1.2}%
-\contentsline {section}{\numberline {12.2}T-Coffee Algorithm}{33}{section.12.2}%
-\contentsline {subsection}{\numberline {12.2.1}Generating a primary library of alignments}{34}{subsection.12.2.1}%
-\contentsline {subsection}{\numberline {12.2.2}Derivation of the primary library weights}{35}{subsection.12.2.2}%
-\contentsline {subsection}{\numberline {12.2.3}Combination of the libraries}{35}{subsection.12.2.3}%
-\contentsline {subsection}{\numberline {12.2.4}Extending the library}{35}{subsection.12.2.4}%
-\contentsline {subsubsection}{\numberline {12.2.4.1}A quick example}{35}{subsubsection.12.2.4.1}%
-\contentsline {subsubsection}{\numberline {12.2.4.2}Alignment}{36}{subsubsection.12.2.4.2}%
-\contentsline {subsection}{\numberline {12.2.5}Progressive alignment strategy}{36}{subsection.12.2.5}%
-\contentsline {section}{\numberline {12.3}Biological validation}{36}{section.12.3}%
-\contentsline {subsection}{\numberline {12.3.1}Application to serine/threonine kinases}{36}{subsection.12.3.1}%
-\contentsline {chapter}{\numberline {13}Protein profiles with HMMs}{38}{chapter.13}%
-\contentsline {section}{\numberline {13.1}Introduction}{38}{section.13.1}%
-\contentsline {section}{\numberline {13.2}The protein HMM}{39}{section.13.2}%
-\contentsline {section}{\numberline {13.3}Estimating the HMM}{40}{section.13.3}%
-\contentsline {subsection}{\numberline {13.3.1}The distance from sequence to model}{40}{subsection.13.3.1}%
-\contentsline {subsection}{\numberline {13.3.2}Estimation algorithm}{41}{subsection.13.3.2}%
-\contentsline {subsection}{\numberline {13.3.3}Choosing the length of the model}{42}{subsection.13.3.3}%
-\contentsline {subsection}{\numberline {13.3.4}Over-fitting and regularization}{42}{subsection.13.3.4}%
-\contentsline {section}{\numberline {13.4}Conclusions}{42}{section.13.4}%
-\contentsline {chapter}{\numberline {14}Construction of phylogenetic trees}{44}{chapter.14}%
-\contentsline {section}{\numberline {14.1}What are phylogenetic trees}{44}{section.14.1}%
-\contentsline {section}{\numberline {14.2}Introduction}{44}{section.14.2}%
-\contentsline {subsection}{\numberline {14.2.1}Ancenstral genes, Orthologs and Paralogs}{45}{subsection.14.2.1}%
-\contentsline {subsection}{\numberline {14.2.2}Proteins or nucleic acids?}{45}{subsection.14.2.2}%
-\contentsline {section}{\numberline {14.3}Determining the mutation distance}{45}{section.14.3}%
-\contentsline {subsection}{\numberline {14.3.1}Genetic distances}{46}{subsection.14.3.1}%
-\contentsline {section}{\numberline {14.4}Testing alternative trees}{47}{section.14.4}%
-\contentsline {subsection}{\numberline {14.4.1}Standard deviation}{47}{subsection.14.4.1}%
-\contentsline {section}{\numberline {14.5}The statistically optimal tree}{47}{section.14.5}%
-\contentsline {section}{\numberline {14.6}Phylogenetic relationships in trees}{47}{section.14.6}%
-\contentsline {subsection}{\numberline {14.6.1}Fitch-Margoliash algorithm (FM)}{48}{subsection.14.6.1}%
-\contentsline {chapter}{\numberline {15}Toward defining the course of evolution: minimum change for a specific tree topology}{49}{chapter.15}%
-\contentsline {section}{\numberline {15.1}Maximum parsimony principle}{49}{section.15.1}%
-\contentsline {subsection}{\numberline {15.1.1}Maximum parsimony method}{49}{subsection.15.1.1}%
-\contentsline {section}{\numberline {15.2}Introduction}{50}{section.15.2}%
-\contentsline {section}{\numberline {15.3}Method}{50}{section.15.3}%
-\contentsline {subsection}{\numberline {15.3.1}Assumptions}{50}{subsection.15.3.1}%
-\contentsline {subsection}{\numberline {15.3.2}Reconstruction of possible ancestral nucleotides-preliminary phase}{51}{subsection.15.3.2}%
-\contentsline {subsection}{\numberline {15.3.3}Reconstruction of possible ancestral nucleotides-final phase}{52}{subsection.15.3.3}%
-\contentsline {subsubsection}{\numberline {15.3.3.1}The algorithm}{53}{subsubsection.15.3.3.1}%
-\contentsline {subsection}{\numberline {15.3.4}Permitted links between nucleotides in successive nodal sets}{53}{subsection.15.3.4}%
-\contentsline {subsection}{\numberline {15.3.5}"Probabilities associated with specific links}{54}{subsection.15.3.5}%
-\contentsline {subsubsection}{\numberline {15.3.5.1}The procedure for calculating "probabilities"}{55}{subsubsection.15.3.5.1}%
-\contentsline {paragraph}{\numberline {15.3.5.1.1}Notes}{56}{paragraph.15.3.5.1.1}%
-\contentsline {chapter}{\numberline {16}Evolutionary Trees from DNA Sequences: A Maximum Likelihood Approach}{57}{chapter.16}%
-\contentsline {section}{\numberline {16.1}Maximum likelihood estimation}{57}{section.16.1}%
-\contentsline {subsection}{\numberline {16.1.1}Principles}{57}{subsection.16.1.1}%
-\contentsline {subsection}{\numberline {16.1.2}Phylosophy}{58}{subsection.16.1.2}%
-\contentsline {subsection}{\numberline {16.1.3}ML for phylogenetic trees}{58}{subsection.16.1.3}%
-\contentsline {section}{\numberline {16.2}Introduction}{58}{section.16.2}%
-\contentsline {section}{\numberline {16.3}Computing likelihood of a tree }{59}{section.16.3}%
-\contentsline {section}{\numberline {16.4}The base substitution probabilities}{60}{section.16.4}%
-\contentsline {section}{\numberline {16.5}The pulley principle}{60}{section.16.5}%
-\contentsline {section}{\numberline {16.6}Finding the Maximum Likelihood tree}{61}{section.16.6}%
-\contentsline {section}{\numberline {16.7}Searching among tree topologies}{62}{section.16.7}%
-\contentsline {section}{\numberline {16.8}Finding optimum segment lengths}{62}{section.16.8}%
+\contentsline {chapter}{\numberline {7}Gapped-BLAST and PSI-BLAST}{21}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Abstract}{21}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Gapped BLAST algorithm}{21}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Quick BLAST recap}{21}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}Refinement of the original algorithm: two hits method}{21}{subsection.7.2.2}%
+\contentsline {section}{\numberline {7.3}PSI-BLAST}{22}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Introduction}{22}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}Score matrix architecture}{22}{subsection.7.3.2}%
+\contentsline {subsection}{\numberline {7.3.3}Multiple alignment construction}{22}{subsection.7.3.3}%
+\contentsline {subsection}{\numberline {7.3.4}Multiple alignment construction}{23}{subsection.7.3.4}%
+\contentsline {subsection}{\numberline {7.3.5}Target frequency estimation}{23}{subsection.7.3.5}%
+\contentsline {chapter}{\numberline {8}CLUSTAL-W}{24}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Introduction}{24}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Local minimum problem}{24}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2}The choice of alignment parameters}{24}{subsection.8.1.2}%
+\contentsline {section}{\numberline {8.2}Alignment method}{25}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}The distance matrix}{25}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}The guide tree}{25}{subsection.8.2.2}%
+\contentsline {subsection}{\numberline {8.2.3}Progressive alignment}{25}{subsection.8.2.3}%
+\contentsline {section}{\numberline {8.3}Improvements to progressive alignment}{25}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Sequence weighting}{26}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}Gap penalties}{26}{subsection.8.3.2}%
+\contentsline {subsection}{\numberline {8.3.3}Weight matrices}{27}{subsection.8.3.3}%
+\contentsline {subsection}{\numberline {8.3.4}Divergent sequences}{27}{subsection.8.3.4}%
+\contentsline {section}{\numberline {8.4}Discussion}{27}{section.8.4}%
+\contentsline {chapter}{\numberline {9}T-COFFEE - ELISA}{28}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Introduction}{28}{section.9.1}%
+\contentsline {section}{\numberline {9.2}T-Coffee Algorithm}{29}{section.9.2}%
+\contentsline {subsection}{\numberline {9.2.1}Generating a primary library of alignments}{29}{subsection.9.2.1}%
+\contentsline {subsection}{\numberline {9.2.2}Derivation of the primary library weights}{30}{subsection.9.2.2}%
+\contentsline {subsection}{\numberline {9.2.3}Combination of the libraries}{30}{subsection.9.2.3}%
+\contentsline {subsection}{\numberline {9.2.4}Extending the library}{30}{subsection.9.2.4}%
+\contentsline {subsection}{\numberline {9.2.5}Progressive alignment strategy}{31}{subsection.9.2.5}%
+\contentsline {section}{\numberline {9.3}Discussion}{31}{section.9.3}%
+\contentsline {chapter}{\numberline {10}T-COFFEE - ILARIA}{32}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Introduction}{32}{section.10.1}%
+\contentsline {subsection}{\numberline {10.1.1}Reasons for the development}{32}{subsection.10.1.1}%
+\contentsline {subsubsection}{\numberline {10.1.1.1}Once a gap, always a gap}{32}{subsubsection.10.1.1.1}%
+\contentsline {subsubsection}{\numberline {10.1.1.2}Global and local alignment}{32}{subsubsection.10.1.1.2}%
+\contentsline {section}{\numberline {10.2}T-Coffee Algorithm}{33}{section.10.2}%
+\contentsline {subsection}{\numberline {10.2.1}Generating a primary library of alignments}{34}{subsection.10.2.1}%
+\contentsline {subsection}{\numberline {10.2.2}Derivation of the primary library weights}{35}{subsection.10.2.2}%
+\contentsline {subsection}{\numberline {10.2.3}Combination of the libraries}{35}{subsection.10.2.3}%
+\contentsline {subsection}{\numberline {10.2.4}Extending the library}{35}{subsection.10.2.4}%
+\contentsline {subsubsection}{\numberline {10.2.4.1}A quick example}{35}{subsubsection.10.2.4.1}%
+\contentsline {subsubsection}{\numberline {10.2.4.2}Alignment}{36}{subsubsection.10.2.4.2}%
+\contentsline {subsection}{\numberline {10.2.5}Progressive alignment strategy}{36}{subsection.10.2.5}%
+\contentsline {section}{\numberline {10.3}Biological validation}{36}{section.10.3}%
+\contentsline {subsection}{\numberline {10.3.1}Application to serine/threonine kinases}{36}{subsection.10.3.1}%
+\contentsline {chapter}{\numberline {11}Protein profiles with HMMs}{38}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Introduction}{38}{section.11.1}%
+\contentsline {section}{\numberline {11.2}The protein HMM}{39}{section.11.2}%
+\contentsline {section}{\numberline {11.3}Estimating the HMM}{40}{section.11.3}%
+\contentsline {subsection}{\numberline {11.3.1}The distance from sequence to model}{40}{subsection.11.3.1}%
+\contentsline {subsection}{\numberline {11.3.2}Estimation algorithm}{41}{subsection.11.3.2}%
+\contentsline {subsection}{\numberline {11.3.3}Choosing the length of the model}{42}{subsection.11.3.3}%
+\contentsline {subsection}{\numberline {11.3.4}Over-fitting and regularization}{42}{subsection.11.3.4}%
+\contentsline {section}{\numberline {11.4}Conclusions}{42}{section.11.4}%
+\contentsline {chapter}{\numberline {12}Construction of phylogenetic trees}{44}{chapter.12}%
+\contentsline {section}{\numberline {12.1}What are phylogenetic trees}{44}{section.12.1}%
+\contentsline {section}{\numberline {12.2}Introduction}{44}{section.12.2}%
+\contentsline {subsection}{\numberline {12.2.1}Ancenstral genes, Orthologs and Paralogs}{45}{subsection.12.2.1}%
+\contentsline {subsection}{\numberline {12.2.2}Proteins or nucleic acids?}{45}{subsection.12.2.2}%
+\contentsline {section}{\numberline {12.3}Determining the mutation distance}{45}{section.12.3}%
+\contentsline {subsection}{\numberline {12.3.1}Genetic distances}{46}{subsection.12.3.1}%
+\contentsline {section}{\numberline {12.4}Testing alternative trees}{47}{section.12.4}%
+\contentsline {subsection}{\numberline {12.4.1}Standard deviation}{47}{subsection.12.4.1}%
+\contentsline {section}{\numberline {12.5}The statistically optimal tree}{47}{section.12.5}%
+\contentsline {section}{\numberline {12.6}Phylogenetic relationships in trees}{47}{section.12.6}%
+\contentsline {subsection}{\numberline {12.6.1}Fitch-Margoliash algorithm (FM)}{48}{subsection.12.6.1}%
+\contentsline {chapter}{\numberline {13}Toward defining the course of evolution: minimum change for a specific tree topology}{49}{chapter.13}%
+\contentsline {section}{\numberline {13.1}Maximum parsimony principle}{49}{section.13.1}%
+\contentsline {subsection}{\numberline {13.1.1}Maximum parsimony method}{49}{subsection.13.1.1}%
+\contentsline {section}{\numberline {13.2}Introduction}{50}{section.13.2}%
+\contentsline {section}{\numberline {13.3}Method}{50}{section.13.3}%
+\contentsline {subsection}{\numberline {13.3.1}Assumptions}{50}{subsection.13.3.1}%
+\contentsline {subsection}{\numberline {13.3.2}Reconstruction of possible ancestral nucleotides-preliminary phase}{51}{subsection.13.3.2}%
+\contentsline {subsection}{\numberline {13.3.3}Reconstruction of possible ancestral nucleotides-final phase}{52}{subsection.13.3.3}%
+\contentsline {subsubsection}{\numberline {13.3.3.1}The algorithm}{53}{subsubsection.13.3.3.1}%
+\contentsline {subsection}{\numberline {13.3.4}Permitted links between nucleotides in successive nodal sets}{53}{subsection.13.3.4}%
+\contentsline {subsection}{\numberline {13.3.5}"Probabilities associated with specific links}{54}{subsection.13.3.5}%
+\contentsline {subsubsection}{\numberline {13.3.5.1}The procedure for calculating "probabilities"}{55}{subsubsection.13.3.5.1}%
+\contentsline {paragraph}{\numberline {13.3.5.1.1}Notes}{56}{paragraph.13.3.5.1.1}%
+\contentsline {chapter}{\numberline {14}Evolutionary Trees from DNA Sequences: A Maximum Likelihood Approach}{57}{chapter.14}%
+\contentsline {section}{\numberline {14.1}Maximum likelihood estimation}{57}{section.14.1}%
+\contentsline {subsection}{\numberline {14.1.1}Principles}{57}{subsection.14.1.1}%
+\contentsline {subsection}{\numberline {14.1.2}Phylosophy}{58}{subsection.14.1.2}%
+\contentsline {subsection}{\numberline {14.1.3}ML for phylogenetic trees}{58}{subsection.14.1.3}%
+\contentsline {section}{\numberline {14.2}Introduction}{58}{section.14.2}%
+\contentsline {section}{\numberline {14.3}Computing likelihood of a tree }{59}{section.14.3}%
+\contentsline {section}{\numberline {14.4}The base substitution probabilities}{60}{section.14.4}%
+\contentsline {section}{\numberline {14.5}The pulley principle}{60}{section.14.5}%
+\contentsline {section}{\numberline {14.6}Finding the Maximum Likelihood tree}{61}{section.14.6}%
+\contentsline {section}{\numberline {14.7}Searching among tree topologies}{62}{section.14.7}%
+\contentsline {section}{\numberline {14.8}Finding optimum segment lengths}{62}{section.14.8}%

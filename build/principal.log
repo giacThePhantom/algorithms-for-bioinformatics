@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.5.18)  24 JUN 2022 12:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.5.18)  24 JUN 2022 16:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -762,20 +762,12 @@ Chapter 5.
 Chapter 6.
 [16
 
-] [17] [18] [19]) (./chapters/07_How_to_BLAST.tex [20]
+] [17] [18] [19]) (./chapters/08_Gapped_PSI_BLAST.tex [20]
 Chapter 7.
-) (./chapters/08_gapped_BLAST.tex [21
+[21
 
-]
+] [22]) (./chapters/10_CLUSTAL_W.tex [23]
 Chapter 8.
-) (./chapters/09_PSI_BLAST.tex [22
-
-]
-Chapter 9.
-) (./chapters/10_CLUSTAL_W.tex [23
-
-]
-Chapter 10.
 
 Underfull \hbox (badness 10000) in paragraph at lines 12--17
 
@@ -790,7 +782,7 @@ Overfull \hbox (31.24065pt too wide) detected at line 60
  []
 
 [26]) (./chapters/11_T_COFFEE.tex [27]
-Chapter 11.
+Chapter 9.
 
 Underfull \hbox (badness 10000) in paragraph at lines 8--21
 
@@ -799,7 +791,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--21
 [28
 
 ]
-<chapters/images//tcoffee.png, id=818, 319.1925pt x 434.5836pt>
+<chapters/images//tcoffee.png, id=861, 319.1925pt x 434.5836pt>
 File: chapters/images//tcoffee.png Graphic file (type png)
 <use chapters/images//tcoffee.png>
 Package pdftex.def Info: chapters/images//tcoffee.png  used on input line 29.
@@ -810,8 +802,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 66--76
  []
 
 [31]
-Chapter 12.
-<chapters/11//1.png, id=836, 716.6775pt x 962.59625pt>
+Chapter 10.
+<chapters/11//1.png, id=879, 716.6775pt x 962.59625pt>
 File: chapters/11//1.png Graphic file (type png)
 <use chapters/11//1.png>
 Package pdftex.def Info: chapters/11//1.png  used on input line 100.
@@ -819,24 +811,24 @@ Package pdftex.def Info: chapters/11//1.png  used on input line 100.
 [32
 
 ]
-<chapters/11//2a.png, id=845, 1493.58pt x 449.68pt>
+<chapters/11//2a.png, id=888, 1493.58pt x 449.68pt>
 File: chapters/11//2a.png Graphic file (type png)
 <use chapters/11//2a.png>
 Package pdftex.def Info: chapters/11//2a.png  used on input line 117.
 (pdftex.def)             Requested size: 346.89731pt x 104.43973pt.
-<chapters/11//2b.png, id=846, 1450.41875pt x 317.185pt>
+<chapters/11//2b.png, id=889, 1450.41875pt x 317.185pt>
 File: chapters/11//2b.png Graphic file (type png)
 <use chapters/11//2b.png>
 Package pdftex.def Info: chapters/11//2b.png  used on input line 118.
 (pdftex.def)             Requested size: 346.89731pt x 75.85976pt.
-<chapters/11//2c.png, id=847, 1485.55pt x 596.2275pt>
+<chapters/11//2c.png, id=890, 1485.55pt x 596.2275pt>
 File: chapters/11//2c.png Graphic file (type png)
 <use chapters/11//2c.png>
 Package pdftex.def Info: chapters/11//2c.png  used on input line 119.
 (pdftex.def)             Requested size: 346.89731pt x 139.22191pt.
  [33 <./chapters/11//1.png>] [34 <./chapters/11//2a.png> <./chapters/11//2b.png
 > <./chapters/11//2c.png>] [35]) (./chapters/12_HMM.tex [36] [37]
-Chapter 13.
+Chapter 11.
 
 Underfull \hbox (badness 10000) in paragraph at lines 5--23
 
@@ -854,7 +846,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--33
 
  []
 
-<chapters/images//HMM.png, id=894, 1354.05875pt x 444.66125pt>
+<chapters/images//HMM.png, id=936, 1354.05875pt x 444.66125pt>
 File: chapters/images//HMM.png Graphic file (type png)
 <use chapters/images//HMM.png>
 Package pdftex.def Info: chapters/images//HMM.png  used on input line 36.
@@ -912,8 +904,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 132--152
  []
 
 [42]) (./chapters/13_phylo_fm.tex [43]
-Chapter 14.
-<chapters/13//grams.png, id=936, 1156.32pt x 249.93375pt>
+Chapter 12.
+<chapters/13//grams.png, id=979, 1156.32pt x 249.93375pt>
 File: chapters/13//grams.png Graphic file (type png)
 <use chapters/13//grams.png>
 Package pdftex.def Info: chapters/13//grams.png  used on input line 14.
@@ -921,21 +913,21 @@ Package pdftex.def Info: chapters/13//grams.png  used on input line 14.
 [44
 
  <./chapters/13//grams.png>]
-<chapters/13//1.png, id=945, 246.9225pt x 278.03876pt>
+<chapters/13//1.png, id=988, 246.9225pt x 278.03876pt>
 File: chapters/13//1.png Graphic file (type png)
 <use chapters/13//1.png>
 Package pdftex.def Info: chapters/13//1.png  used on input line 67.
 (pdftex.def)             Requested size: 173.44534pt x 195.30035pt.
  [45] [46 <./chapters/13//1.png>] [47]
-<chapters/13//ex1.png, id=967, 779.91376pt x 368.37625pt>
+<chapters/13//ex1.png, id=1009, 779.91376pt x 368.37625pt>
 File: chapters/13//ex1.png Graphic file (type png)
 <use chapters/13//ex1.png>
 Package pdftex.def Info: chapters/13//ex1.png  used on input line 126.
 (pdftex.def)             Requested size: 346.89731pt x 163.8454pt.
 )
 (./chapters/14_phylo_MP.tex [48 <./chapters/13//ex1.png>]
-Chapter 15.
-<chapters/14//1.png, id=976, 856.19875pt x 207.77625pt>
+Chapter 13.
+<chapters/14//1.png, id=1018, 856.19875pt x 207.77625pt>
 File: chapters/14//1.png Graphic file (type png)
 <use chapters/14//1.png>
 Package pdftex.def Info: chapters/14//1.png  used on input line 26.
@@ -943,47 +935,47 @@ Package pdftex.def Info: chapters/14//1.png  used on input line 26.
 [49
 
 ] [50 <./chapters/14//1.png>]
-<chapters/14//2.png, id=987, 800.9925pt x 432.61626pt>
+<chapters/14//2.png, id=1029, 800.9925pt x 432.61626pt>
 File: chapters/14//2.png Graphic file (type png)
 <use chapters/14//2.png>
 Package pdftex.def Info: chapters/14//2.png  used on input line 65.
 (pdftex.def)             Requested size: 390.25534pt x 210.78241pt.
  [51 <./chapters/14//2.png>]
-<chapters/14//3.png, id=996, 783.92876pt x 627.34375pt>
+<chapters/14//3.png, id=1038, 783.92876pt x 627.34375pt>
 File: chapters/14//3.png Graphic file (type png)
 <use chapters/14//3.png>
 Package pdftex.def Info: chapters/14//3.png  used on input line 83.
 (pdftex.def)             Requested size: 390.25534pt x 312.3118pt.
  [52 <./chapters/14//3.png>]
-<chapters/14//4.png, id=1010, 797.98125pt x 498.86375pt>
+<chapters/14//4.png, id=1052, 797.98125pt x 498.86375pt>
 File: chapters/14//4.png Graphic file (type png)
 <use chapters/14//4.png>
 Package pdftex.def Info: chapters/14//4.png  used on input line 111.
 (pdftex.def)             Requested size: 390.25534pt x 243.97343pt.
  [53] [54 <./chapters/14//4.png>]
-<chapters/14//5.png, id=1027, 795.97375pt x 528.97626pt>
+<chapters/14//5.png, id=1069, 795.97375pt x 528.97626pt>
 File: chapters/14//5.png Graphic file (type png)
 <use chapters/14//5.png>
 Package pdftex.def Info: chapters/14//5.png  used on input line 140.
 (pdftex.def)             Requested size: 390.25534pt x 259.34592pt.
 ) (./chapters/15_phylo_ML.tex
 [55 <./chapters/14//5.png>] [56]
-Chapter 16.
+Chapter 14.
 [57
 
 ] [58]
-<chapters/15//tree1.png, id=1059, 433.62pt x 395.4775pt>
+<chapters/15//tree1.png, id=1102, 433.62pt x 395.4775pt>
 File: chapters/15//tree1.png Graphic file (type png)
 <use chapters/15//tree1.png>
 Package pdftex.def Info: chapters/15//tree1.png  used on input line 80.
 (pdftex.def)             Requested size: 216.81pt x 197.73827pt.
  [59 <./chapters/15//tree1.png>] [60]
-<chapters/15//tree2.png, id=1078, 688.5725pt x 528.97626pt>
+<chapters/15//tree2.png, id=1120, 688.5725pt x 528.97626pt>
 File: chapters/15//tree2.png Graphic file (type png)
 <use chapters/15//tree2.png>
 Package pdftex.def Info: chapters/15//tree2.png  used on input line 137.
 (pdftex.def)             Requested size: 216.81pt x 166.55576pt.
-<chapters/15//tree3.png, id=1079, 522.95375pt x 218.8175pt>
+<chapters/15//tree3.png, id=1121, 522.95375pt x 218.8175pt>
 File: chapters/15//tree3.png Graphic file (type png)
 <use chapters/15//tree3.png>
 Package pdftex.def Info: chapters/15//tree3.png  used on input line 138.
@@ -994,14 +986,14 @@ Package pdftex.def Info: chapters/15//tree3.png  used on input line 138.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `principal.out' has not changed.
-(rerunfilecheck)             Checksum: C746E5046E7BC05EE12522D405671348;24957.
+(rerunfilecheck)             Checksum: 5DFFFB76C0BDB50EBD173AD7F74DB3AF;26393.
  ) 
 Here is how much of TeX's memory you used:
- 17125 strings out of 478238
- 273109 string characters out of 5850456
- 601027 words of memory out of 5000000
- 34777 multiletter control sequences out of 15000+600000
- 496013 words of font info for 92 fonts, out of 8000000 for 9000
+ 17134 strings out of 478238
+ 273077 string characters out of 5850456
+ 600123 words of memory out of 5000000
+ 34783 multiletter control sequences out of 15000+600000
+ 496686 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  65i,12n,66p,1573b,479s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/t
@@ -1024,17 +1016,17 @@ lic/cm-super/sfbx1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sf
 bx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></us
 r/share/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/share/texmf-d
 ist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf-dist/fonts/type1
-/public/cm-super/sfrm0600.pfb></usr/share/texmf-dist/fonts/type1/public/cm-supe
-r/sfrm0700.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb>
-</usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/share/tex
-mf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/t
-ype1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-
-super/sfti0900.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1000.
-pfb>
-Output written on ./build/principal.pdf (64 pages, 1679925 bytes).
+/public/cm-super/sfcc1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-supe
+r/sfrm0600.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb>
+</usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/tex
+mf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/share/texmf-dist/fonts/t
+ype1/public/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-
+super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti0900.
+pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
+Output written on ./build/principal.pdf (64 pages, 1698411 bytes).
 PDF statistics:
- 1306 PDF objects out of 1440 (max. 8388607)
- 1130 compressed objects within 12 object streams
- 268 named destinations out of 1000 (max. 500000)
- 1110 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1353 PDF objects out of 1440 (max. 8388607)
+ 1175 compressed objects within 12 object streams
+ 276 named destinations out of 1000 (max. 500000)
+ 1174 words of extra memory for PDF output out of 10000 (max. 10000000)
 
