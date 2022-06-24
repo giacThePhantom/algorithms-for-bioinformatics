@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.5.18)  24 JUN 2022 16:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.5.18)  24 JUN 2022 16:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -702,13 +702,13 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 19.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 20.
 
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 19.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 20.
 
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -729,19 +729,19 @@ l.40 ...ocal alignment search tool}{16}{chapter.6}
 \openout4 = `principal.toc'.
 
 
-(./chapters/01_Needleman_Wunsch.tex [4]
+(./chapters/01/needleman-wunsch.tex [4]
 Chapter 1.
 [5
 
-]) (./chapters/02_Smith_Waterman.tex [6]
+]) (./chapters/02/smith-waterman.tex [6]
 Chapter 2.
 [7
 
-]) (./chapters/03_PAM.tex [8]
+]) (./chapters/03/pam.tex [8]
 Chapter 3.
 [9
 
-]) (./chapters/04_BLOSUM.tex
+]) (./chapters/04/blosum.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 22.48724pt, for example:
@@ -754,34 +754,34 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 Chapter 4.
 [11
 
-] [12]) (./chapters/05_FASTA.tex [13]
+] [12]) (./chapters/05/fasta.tex [13]
 Chapter 5.
 [14
 
-]) (./chapters/06_BLAST.tex [15]
+]) (./chapters/06/blast.tex [15]
 Chapter 6.
 [16
 
-] [17] [18] [19]) (./chapters/08_Gapped_PSI_BLAST.tex [20]
+] [17] [18] [19]) (./chapters/07/gapped-psi-blast.tex [20]
 Chapter 7.
 [21
 
-] [22]) (./chapters/10_CLUSTAL_W.tex [23]
+] [22]) (./chapters/08/clustal-w.tex [23]
 Chapter 8.
 
-Underfull \hbox (badness 10000) in paragraph at lines 12--17
+Underfull \hbox (badness 10000) in paragraph at lines 13--18
 
  []
 
 [24
 
 ] [25]
-Overfull \hbox (31.24065pt too wide) detected at line 60
+Overfull \hbox (31.24065pt too wide) detected at line 61
 \OML/cmm/m/it/10 GOP \OMS/cmsy/m/n/10 ! [] ^^C \OT1/cmr/m/n/10 ([]) \OMS/cmsy/m
 /n/10 ^^C \OT1/cmr/m/n/10 ([])
  []
 
-[26]) (./chapters/11_T_COFFEE.tex [27]
+[26]) (./chapters/09/t-coffee.tex [27]
 Chapter 9.
 
 Underfull \hbox (badness 10000) in paragraph at lines 8--21
@@ -791,43 +791,45 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--21
 [28
 
 ]
-<chapters/images//tcoffee.png, id=861, 319.1925pt x 434.5836pt>
-File: chapters/images//tcoffee.png Graphic file (type png)
-<use chapters/images//tcoffee.png>
-Package pdftex.def Info: chapters/images//tcoffee.png  used on input line 29.
+<chapters/09/images/tcoffee.png, id=861, 319.1925pt x 434.5836pt>
+File: chapters/09/images/tcoffee.png Graphic file (type png)
+<use chapters/09/images/tcoffee.png>
+Package pdftex.def Info: chapters/09/images/tcoffee.png  used on input line 29.
+
 (pdftex.def)             Requested size: 216.81pt x 295.188pt.
- [29 <./chapters/images//tcoffee.png>] [30]
+ [29 <./chapters/09/images/tcoffee.png>] [30]
 Underfull \hbox (badness 10000) in paragraph at lines 66--76
 
  []
 
 [31]
 Chapter 10.
-<chapters/11//1.png, id=879, 716.6775pt x 962.59625pt>
-File: chapters/11//1.png Graphic file (type png)
-<use chapters/11//1.png>
-Package pdftex.def Info: chapters/11//1.png  used on input line 100.
+<chapters/09/images/1.png, id=879, 716.6775pt x 962.59625pt>
+File: chapters/09/images/1.png Graphic file (type png)
+<use chapters/09/images/1.png>
+Package pdftex.def Info: chapters/09/images/1.png  used on input line 99.
 (pdftex.def)             Requested size: 216.81pt x 291.20462pt.
 [32
 
 ]
-<chapters/11//2a.png, id=888, 1493.58pt x 449.68pt>
-File: chapters/11//2a.png Graphic file (type png)
-<use chapters/11//2a.png>
-Package pdftex.def Info: chapters/11//2a.png  used on input line 117.
+<chapters/09/images/2a.png, id=888, 1493.58pt x 449.68pt>
+File: chapters/09/images/2a.png Graphic file (type png)
+<use chapters/09/images/2a.png>
+Package pdftex.def Info: chapters/09/images/2a.png  used on input line 116.
 (pdftex.def)             Requested size: 346.89731pt x 104.43973pt.
-<chapters/11//2b.png, id=889, 1450.41875pt x 317.185pt>
-File: chapters/11//2b.png Graphic file (type png)
-<use chapters/11//2b.png>
-Package pdftex.def Info: chapters/11//2b.png  used on input line 118.
+<chapters/09/images/2b.png, id=889, 1450.41875pt x 317.185pt>
+File: chapters/09/images/2b.png Graphic file (type png)
+<use chapters/09/images/2b.png>
+Package pdftex.def Info: chapters/09/images/2b.png  used on input line 117.
 (pdftex.def)             Requested size: 346.89731pt x 75.85976pt.
-<chapters/11//2c.png, id=890, 1485.55pt x 596.2275pt>
-File: chapters/11//2c.png Graphic file (type png)
-<use chapters/11//2c.png>
-Package pdftex.def Info: chapters/11//2c.png  used on input line 119.
+<chapters/09/images/2c.png, id=890, 1485.55pt x 596.2275pt>
+File: chapters/09/images/2c.png Graphic file (type png)
+<use chapters/09/images/2c.png>
+Package pdftex.def Info: chapters/09/images/2c.png  used on input line 118.
 (pdftex.def)             Requested size: 346.89731pt x 139.22191pt.
- [33 <./chapters/11//1.png>] [34 <./chapters/11//2a.png> <./chapters/11//2b.png
-> <./chapters/11//2c.png>] [35]) (./chapters/12_HMM.tex [36] [37]
+ [33 <./chapters/09/images/1.png>] [34 <./chapters/09/images/2a.png> <./chapter
+s/09/images/2b.png> <./chapters/09/images/2c.png>] [35])
+(./chapters/10/hmm.tex [36] [37]
 Chapter 11.
 
 Underfull \hbox (badness 10000) in paragraph at lines 5--23
@@ -846,10 +848,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--33
 
  []
 
-<chapters/images//HMM.png, id=936, 1354.05875pt x 444.66125pt>
-File: chapters/images//HMM.png Graphic file (type png)
-<use chapters/images//HMM.png>
-Package pdftex.def Info: chapters/images//HMM.png  used on input line 36.
+<chapters/10/images//HMM.png, id=936, 1354.05875pt x 444.66125pt>
+File: chapters/10/images//HMM.png Graphic file (type png)
+<use chapters/10/images//HMM.png>
+Package pdftex.def Info: chapters/10/images//HMM.png  used on input line 36.
 (pdftex.def)             Requested size: 216.81pt x 71.19475pt.
 
 Overfull \hbox (0.4715pt too wide) in paragraph at lines 39--45
@@ -867,7 +869,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--45
 
  []
 
-[39 <./chapters/images//HMM.png>]
+[39 <./chapters/10/images//HMM.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 52--59
 
  []
@@ -888,100 +890,101 @@ OT1/cmr/m/n/10 ) = \OMS/cmsy/m/n/10 ^^@ [] [] []
 
 LaTeX Warning: Command \textquoteright invalid in math mode on input line 125.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 132--152
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 132--152
+) (./chapters/11/phylo-fm.tex
+Underfull \hbox (badness 10000) in paragraph at lines 132--2
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--152
+Underfull \hbox (badness 10000) in paragraph at lines 132--2
 
  []
 
-[42]) (./chapters/13_phylo_fm.tex [43]
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--2
+
+ []
+
+[42] [43]
 Chapter 12.
-<chapters/13//grams.png, id=979, 1156.32pt x 249.93375pt>
-File: chapters/13//grams.png Graphic file (type png)
-<use chapters/13//grams.png>
-Package pdftex.def Info: chapters/13//grams.png  used on input line 14.
+<chapters/11/images/grams.png, id=979, 1156.32pt x 249.93375pt>
+File: chapters/11/images/grams.png Graphic file (type png)
+<use chapters/11/images/grams.png>
+Package pdftex.def Info: chapters/11/images/grams.png  used on input line 14.
 (pdftex.def)             Requested size: 390.25534pt x 84.3509pt.
 [44
 
- <./chapters/13//grams.png>]
-<chapters/13//1.png, id=988, 246.9225pt x 278.03876pt>
-File: chapters/13//1.png Graphic file (type png)
-<use chapters/13//1.png>
-Package pdftex.def Info: chapters/13//1.png  used on input line 67.
+ <./chapters/11/images/grams.png>]
+<chapters/11/images/1.png, id=988, 246.9225pt x 278.03876pt>
+File: chapters/11/images/1.png Graphic file (type png)
+<use chapters/11/images/1.png>
+Package pdftex.def Info: chapters/11/images/1.png  used on input line 67.
 (pdftex.def)             Requested size: 173.44534pt x 195.30035pt.
- [45] [46 <./chapters/13//1.png>] [47]
-<chapters/13//ex1.png, id=1009, 779.91376pt x 368.37625pt>
-File: chapters/13//ex1.png Graphic file (type png)
-<use chapters/13//ex1.png>
-Package pdftex.def Info: chapters/13//ex1.png  used on input line 126.
+ [45] [46 <./chapters/11/images/1.png>]
+[47]
+<chapters/11/images/ex1.png, id=1009, 779.91376pt x 368.37625pt>
+File: chapters/11/images/ex1.png Graphic file (type png)
+<use chapters/11/images/ex1.png>
+Package pdftex.def Info: chapters/11/images/ex1.png  used on input line 126.
 (pdftex.def)             Requested size: 346.89731pt x 163.8454pt.
-)
-(./chapters/14_phylo_MP.tex [48 <./chapters/13//ex1.png>]
+) (./chapters/12/phylo-mp.tex [48 <./chapters/11/images/ex1.png>]
 Chapter 13.
-<chapters/14//1.png, id=1018, 856.19875pt x 207.77625pt>
-File: chapters/14//1.png Graphic file (type png)
-<use chapters/14//1.png>
-Package pdftex.def Info: chapters/14//1.png  used on input line 26.
+<chapters/12/images/1.png, id=1018, 856.19875pt x 207.77625pt>
+File: chapters/12/images/1.png Graphic file (type png)
+<use chapters/12/images/1.png>
+Package pdftex.def Info: chapters/12/images/1.png  used on input line 26.
 (pdftex.def)             Requested size: 390.25534pt x 94.70319pt.
 [49
 
-] [50 <./chapters/14//1.png>]
-<chapters/14//2.png, id=1029, 800.9925pt x 432.61626pt>
-File: chapters/14//2.png Graphic file (type png)
-<use chapters/14//2.png>
-Package pdftex.def Info: chapters/14//2.png  used on input line 65.
+] [50 <./chapters/12/images/1.png>]
+<chapters/12/images/2.png, id=1029, 800.9925pt x 432.61626pt>
+File: chapters/12/images/2.png Graphic file (type png)
+<use chapters/12/images/2.png>
+Package pdftex.def Info: chapters/12/images/2.png  used on input line 65.
 (pdftex.def)             Requested size: 390.25534pt x 210.78241pt.
- [51 <./chapters/14//2.png>]
-<chapters/14//3.png, id=1038, 783.92876pt x 627.34375pt>
-File: chapters/14//3.png Graphic file (type png)
-<use chapters/14//3.png>
-Package pdftex.def Info: chapters/14//3.png  used on input line 83.
+ [51 <./chapters/12/images/2.png>]
+<chapters/12/images/3.png, id=1038, 783.92876pt x 627.34375pt>
+File: chapters/12/images/3.png Graphic file (type png)
+<use chapters/12/images/3.png>
+Package pdftex.def Info: chapters/12/images/3.png  used on input line 83.
 (pdftex.def)             Requested size: 390.25534pt x 312.3118pt.
- [52 <./chapters/14//3.png>]
-<chapters/14//4.png, id=1052, 797.98125pt x 498.86375pt>
-File: chapters/14//4.png Graphic file (type png)
-<use chapters/14//4.png>
-Package pdftex.def Info: chapters/14//4.png  used on input line 111.
+
+[52 <./chapters/12/images/3.png>]
+<chapters/12/images/4.png, id=1052, 797.98125pt x 498.86375pt>
+File: chapters/12/images/4.png Graphic file (type png)
+<use chapters/12/images/4.png>
+Package pdftex.def Info: chapters/12/images/4.png  used on input line 111.
 (pdftex.def)             Requested size: 390.25534pt x 243.97343pt.
- [53] [54 <./chapters/14//4.png>]
-<chapters/14//5.png, id=1069, 795.97375pt x 528.97626pt>
-File: chapters/14//5.png Graphic file (type png)
-<use chapters/14//5.png>
-Package pdftex.def Info: chapters/14//5.png  used on input line 140.
+ [53] [54 <./chapters/12/images/4.png>]
+<chapters/12/images/5.png, id=1069, 795.97375pt x 528.97626pt>
+File: chapters/12/images/5.png Graphic file (type png)
+<use chapters/12/images/5.png>
+Package pdftex.def Info: chapters/12/images/5.png  used on input line 140.
 (pdftex.def)             Requested size: 390.25534pt x 259.34592pt.
-) (./chapters/15_phylo_ML.tex
-[55 <./chapters/14//5.png>] [56]
+)
+(./chapters/13/phylo-ml.tex [55 <./chapters/12/images/5.png>] [56]
 Chapter 14.
 [57
 
 ] [58]
-<chapters/15//tree1.png, id=1102, 433.62pt x 395.4775pt>
-File: chapters/15//tree1.png Graphic file (type png)
-<use chapters/15//tree1.png>
-Package pdftex.def Info: chapters/15//tree1.png  used on input line 80.
+<chapters/13/images/tree1.png, id=1102, 433.62pt x 395.4775pt>
+File: chapters/13/images/tree1.png Graphic file (type png)
+<use chapters/13/images/tree1.png>
+Package pdftex.def Info: chapters/13/images/tree1.png  used on input line 80.
 (pdftex.def)             Requested size: 216.81pt x 197.73827pt.
- [59 <./chapters/15//tree1.png>] [60]
-<chapters/15//tree2.png, id=1120, 688.5725pt x 528.97626pt>
-File: chapters/15//tree2.png Graphic file (type png)
-<use chapters/15//tree2.png>
-Package pdftex.def Info: chapters/15//tree2.png  used on input line 137.
+ [59 <./chapters/13/images/tree1.png>] [60]
+<chapters/13/images/tree2.png, id=1120, 688.5725pt x 528.97626pt>
+File: chapters/13/images/tree2.png Graphic file (type png)
+<use chapters/13/images/tree2.png>
+Package pdftex.def Info: chapters/13/images/tree2.png  used on input line 137.
 (pdftex.def)             Requested size: 216.81pt x 166.55576pt.
-<chapters/15//tree3.png, id=1121, 522.95375pt x 218.8175pt>
-File: chapters/15//tree3.png Graphic file (type png)
-<use chapters/15//tree3.png>
-Package pdftex.def Info: chapters/15//tree3.png  used on input line 138.
+<chapters/13/images/tree3.png, id=1121, 522.95375pt x 218.8175pt>
+File: chapters/13/images/tree3.png Graphic file (type png)
+<use chapters/13/images/tree3.png>
+Package pdftex.def Info: chapters/13/images/tree3.png  used on input line 138.
 (pdftex.def)             Requested size: 216.81pt x 90.72075pt.
- [61 <./chapters/15//tree2.png> <./chapters/15//tree3.png>] [62]) [63] (./build
-/principal.aux)
+ [61 <./chapters/13/images/tree2.png> <./chapters/13/images/tree3.png>]) [62] [
+63] (./build/principal.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -989,13 +992,13 @@ Package rerunfilecheck Info: File `principal.out' has not changed.
 (rerunfilecheck)             Checksum: 5DFFFB76C0BDB50EBD173AD7F74DB3AF;26393.
  ) 
 Here is how much of TeX's memory you used:
- 17134 strings out of 478238
- 273077 string characters out of 5850456
+ 17148 strings out of 478238
+ 273812 string characters out of 5850456
  600123 words of memory out of 5000000
  34783 multiletter control sequences out of 15000+600000
  496686 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 65i,12n,66p,1573b,479s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 65i,12n,66p,1575b,479s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/t
 exmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public
