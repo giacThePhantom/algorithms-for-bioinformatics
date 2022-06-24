@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.1.4)  24 JUN 2022 10:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.1.4)  24 JUN 2022 12:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -722,25 +722,25 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 lready used, duplicate ignored
 <to be read again> 
                    \relax 
-l.40 ...ocal alignment search tool}{15}{chapter.6}
+l.40 ...ocal alignment search tool}{16}{chapter.6}
                                                   % [1
 
-] [2])
+] [2] [3])
 \tf@toc=\write4
 \openout4 = `principal.toc'.
 
 
-(./chapters/01_Needleman_Wunsch.tex [3]
+(./chapters/01_Needleman_Wunsch.tex [4]
 Chapter 1.
-[4
+[5
 
-]) (./chapters/02_Smith_Waterman.tex [5]
+]) (./chapters/02_Smith_Waterman.tex [6]
 Chapter 2.
-[6
+[7
 
-]) (./chapters/03_PAM.tex [7]
+]) (./chapters/03_PAM.tex [8]
 Chapter 3.
-[8
+[9
 
 ]) (./chapters/04_BLOSUM.tex
 
@@ -749,29 +749,29 @@ Make it at least 22.48724pt.
 We now make it that large for the rest of the document.
 This may cause the page layout to be inconsistent, however.
 
-[9]
+[10]
 Chapter 4.
-[10
+[11
 
-] [11]) (./chapters/05_FASTA.tex [12]
+] [12]) (./chapters/05_FASTA.tex [13]
 Chapter 5.
-[13
+[14
 
-]) (./chapters/06_BLAST.tex [14]
+]) (./chapters/06_BLAST.tex [15]
 Chapter 6.
-[15
+[16
 
-] [16] [17] [18]) (./chapters/07_How_to_BLAST.tex [19]
+] [17] [18] [19]) (./chapters/07_How_to_BLAST.tex [20]
 Chapter 7.
-) (./chapters/08_gapped_BLAST.tex [20
+) (./chapters/08_gapped_BLAST.tex [21
 
 ]
 Chapter 8.
-) (./chapters/09_PSI_BLAST.tex [21
+) (./chapters/09_PSI_BLAST.tex [22
 
 ]
 Chapter 9.
-) (./chapters/10_CLUSTAL_W.tex [22
+) (./chapters/10_CLUSTAL_W.tex [23
 
 ]
 Chapter 10.
@@ -780,61 +780,61 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--17
 
  []
 
-[23
+[24
 
-] [24]
+] [25]
 Overfull \hbox (31.24065pt too wide) detected at line 60
 \OML/cmm/m/it/10 GOP \OMS/cmsy/m/n/10 ! [] ^^C \OT1/cmr/m/n/10 ([]) \OMS/cmsy/m
 /n/10 ^^C \OT1/cmr/m/n/10 ([])
  []
 
-[25]) (./chapters/11_T_COFFEE.tex [26]
+[26]) (./chapters/11_T_COFFEE.tex [27]
 Chapter 11.
 
 Underfull \hbox (badness 10000) in paragraph at lines 8--21
 
  []
 
-[27
+[28
 
 ]
-<chapters/images/tcoffee.png, id=764, 319.1925pt x 434.5836pt>
+<chapters/images/tcoffee.png, id=823, 319.1925pt x 434.5836pt>
 File: chapters/images/tcoffee.png Graphic file (type png)
 <use chapters/images/tcoffee.png>
 Package pdftex.def Info: chapters/images/tcoffee.png  used on input line 29.
 (pdftex.def)             Requested size: 216.81pt x 295.188pt.
- [28 <./chapters/images/tcoffee.png>] [29]
+ [29 <./chapters/images/tcoffee.png>] [30]
 Underfull \hbox (badness 10000) in paragraph at lines 66--76
 
  []
 
-[30]
+[31]
 Chapter 12.
-<chapters/11/1.png, id=782, 716.6775pt x 962.59625pt>
+<chapters/11/1.png, id=841, 716.6775pt x 962.59625pt>
 File: chapters/11/1.png Graphic file (type png)
 <use chapters/11/1.png>
 Package pdftex.def Info: chapters/11/1.png  used on input line 100.
 (pdftex.def)             Requested size: 216.81pt x 291.20462pt.
-[31
+[32
 
 ]
-<chapters/11/2a.png, id=791, 1493.58pt x 449.68pt>
+<chapters/11/2a.png, id=851, 1493.58pt x 449.68pt>
 File: chapters/11/2a.png Graphic file (type png)
 <use chapters/11/2a.png>
 Package pdftex.def Info: chapters/11/2a.png  used on input line 117.
 (pdftex.def)             Requested size: 346.89731pt x 104.43973pt.
-<chapters/11/2b.png, id=792, 1450.41875pt x 317.185pt>
+<chapters/11/2b.png, id=852, 1450.41875pt x 317.185pt>
 File: chapters/11/2b.png Graphic file (type png)
 <use chapters/11/2b.png>
 Package pdftex.def Info: chapters/11/2b.png  used on input line 118.
 (pdftex.def)             Requested size: 346.89731pt x 75.85976pt.
-<chapters/11/2c.png, id=793, 1485.55pt x 596.2275pt>
+<chapters/11/2c.png, id=853, 1485.55pt x 596.2275pt>
 File: chapters/11/2c.png Graphic file (type png)
 <use chapters/11/2c.png>
 Package pdftex.def Info: chapters/11/2c.png  used on input line 119.
 (pdftex.def)             Requested size: 346.89731pt x 139.22191pt.
- [32 <./chapters/11/1.png>] [33 <./chapters/11/2a.png> <./chapters/11/2b.png> <
-./chapters/11/2c.png>] [34]) (./chapters/12_HMM.tex [35] [36]
+ [33 <./chapters/11/1.png>] [34 <./chapters/11/2a.png> <./chapters/11/2b.png> <
+./chapters/11/2c.png>] [35]) (./chapters/12_HMM.tex [36] [37]
 Chapter 13.
 
 Underfull \hbox (badness 10000) in paragraph at lines 5--23
@@ -846,14 +846,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--23
 
  []
 
-[37
+[38
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 25--33
 
  []
 
-<chapters/images/HMM.png, id=840, 1354.05875pt x 444.66125pt>
+<chapters/images/HMM.png, id=899, 1354.05875pt x 444.66125pt>
 File: chapters/images/HMM.png Graphic file (type png)
 <use chapters/images/HMM.png>
 Package pdftex.def Info: chapters/images/HMM.png  used on input line 36.
@@ -874,7 +874,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--45
 
  []
 
-[38 <./chapters/images/HMM.png>]
+[39 <./chapters/images/HMM.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 52--59
 
  []
@@ -884,14 +884,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 61--66
 
  []
 
-[39]
+[40]
 Overfull \hbox (26.99026pt too wide) detected at line 86
 []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s; []\OT1/cmr/m/n/10 ) = \OMS/cmsy/m/n/10 ^
 ^@ [] [] []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s; [] \OMS/cmsy/m/n/10 j []\OT1/cm
 r/m/n/10 ) = \OMS/cmsy/m/n/10 ^^@ [] [] []
  []
 
-[40]
+[41]
 
 LaTeX Warning: Command \textquoteright invalid in math mode on input line 125.
 
@@ -910,68 +910,85 @@ Underfull \hbox (badness 10000) in paragraph at lines 132--152
 
  []
 
-[41]) (./chapters/13_phylo_fm.tex [42]
+[42]) (./chapters/13_phylo_fm.tex [43]
 Chapter 14.
-<chapters/13/grams.png, id=882, 1156.32pt x 249.93375pt>
+<chapters/13/grams.png, id=941, 1156.32pt x 249.93375pt>
 File: chapters/13/grams.png Graphic file (type png)
 <use chapters/13/grams.png>
 Package pdftex.def Info: chapters/13/grams.png  used on input line 14.
 (pdftex.def)             Requested size: 390.25534pt x 84.3509pt.
-[43
+[44
 
  <./chapters/13/grams.png>]
-<chapters/13/1.png, id=891, 246.9225pt x 278.03876pt>
+<chapters/13/1.png, id=950, 246.9225pt x 278.03876pt>
 File: chapters/13/1.png Graphic file (type png)
 <use chapters/13/1.png>
 Package pdftex.def Info: chapters/13/1.png  used on input line 67.
 (pdftex.def)             Requested size: 173.44534pt x 195.30035pt.
- [44] [45 <./chapters/13/1.png>] [46]
-<chapters/13/ex1.png, id=912, 779.91376pt x 368.37625pt>
+ [45] [46 <./chapters/13/1.png>] [47]
+<chapters/13/ex1.png, id=972, 779.91376pt x 368.37625pt>
 File: chapters/13/ex1.png Graphic file (type png)
 <use chapters/13/ex1.png>
-Package pdftex.def Info: chapters/13/ex1.png  used on input line 124.
+Package pdftex.def Info: chapters/13/ex1.png  used on input line 126.
 (pdftex.def)             Requested size: 346.89731pt x 163.8454pt.
 )
-(./chapters/14_phylo_MP.tex [47 <./chapters/13/ex1.png>]
+(./chapters/14_phylo_MP.tex [48 <./chapters/13/ex1.png>]
 Chapter 15.
-<chapters/14/1.png, id=920, 856.19875pt x 207.77625pt>
+<chapters/14/1.png, id=981, 856.19875pt x 207.77625pt>
 File: chapters/14/1.png Graphic file (type png)
 <use chapters/14/1.png>
 Package pdftex.def Info: chapters/14/1.png  used on input line 26.
 (pdftex.def)             Requested size: 390.25534pt x 94.70319pt.
-[48
+[49
 
-] [49 <./chapters/14/1.png>]
-<chapters/14/2.png, id=932, 800.9925pt x 432.61626pt>
+] [50 <./chapters/14/1.png>]
+<chapters/14/2.png, id=992, 800.9925pt x 432.61626pt>
 File: chapters/14/2.png Graphic file (type png)
 <use chapters/14/2.png>
 Package pdftex.def Info: chapters/14/2.png  used on input line 65.
 (pdftex.def)             Requested size: 390.25534pt x 210.78241pt.
- [50 <./chapters/14/2.png>]
-<chapters/14/3.png, id=942, 783.92876pt x 627.34375pt>
+ [51 <./chapters/14/2.png>]
+<chapters/14/3.png, id=1001, 783.92876pt x 627.34375pt>
 File: chapters/14/3.png Graphic file (type png)
 <use chapters/14/3.png>
 Package pdftex.def Info: chapters/14/3.png  used on input line 83.
 (pdftex.def)             Requested size: 390.25534pt x 312.3118pt.
- [51 <./chapters/14/3.png>]
-<chapters/14/4.png, id=956, 797.98125pt x 498.86375pt>
+ [52 <./chapters/14/3.png>]
+<chapters/14/4.png, id=1015, 797.98125pt x 498.86375pt>
 File: chapters/14/4.png Graphic file (type png)
 <use chapters/14/4.png>
 Package pdftex.def Info: chapters/14/4.png  used on input line 111.
 (pdftex.def)             Requested size: 390.25534pt x 243.97343pt.
- [52] [53 <./chapters/14/4.png>]
-<chapters/14/5.png, id=972, 795.97375pt x 528.97626pt>
+ [53] [54 <./chapters/14/4.png>]
+<chapters/14/5.png, id=1032, 795.97375pt x 528.97626pt>
 File: chapters/14/5.png Graphic file (type png)
 <use chapters/14/5.png>
 Package pdftex.def Info: chapters/14/5.png  used on input line 140.
 (pdftex.def)             Requested size: 390.25534pt x 259.34592pt.
-) (./chapters/15_phylo_ML.tex [54 <./chapters/14/5.png>] [55]
+) (./chapters/15_phylo_ML.tex [55 <./chapters/14/5.png>] [56]
 Chapter 16.
-)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 38.
- [56
+[57
 
-]
+] [58]
+<chapters/15/tree1.png, id=1064, 433.62pt x 395.4775pt>
+File: chapters/15/tree1.png Graphic file (type png)
+<use chapters/15/tree1.png>
+Package pdftex.def Info: chapters/15/tree1.png  used on input line 80.
+(pdftex.def)             Requested size: 216.81pt x 197.73827pt.
+ [59 <./chapters/15/tree1.png>] [60]
+<chapters/15/tree2.png, id=1083, 688.5725pt x 528.97626pt>
+File: chapters/15/tree2.png Graphic file (type png)
+<use chapters/15/tree2.png>
+Package pdftex.def Info: chapters/15/tree2.png  used on input line 137.
+(pdftex.def)             Requested size: 216.81pt x 166.55576pt.
+<chapters/15/tree3.png, id=1084, 522.95375pt x 218.8175pt>
+File: chapters/15/tree3.png Graphic file (type png)
+<use chapters/15/tree3.png>
+Package pdftex.def Info: chapters/15/tree3.png  used on input line 138.
+(pdftex.def)             Requested size: 216.81pt x 90.72075pt.
+ [61 <./chapters/15/tree2.png> <./chapters/15/tree3.png>] [62])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 38.
+ [63]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 38.
  (build/principal.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 38.
@@ -985,42 +1002,47 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 38.
  ) 
 Here is how much of TeX's memory you used:
- 13003 strings out of 482820
- 194603 string characters out of 5957805
- 494893 words of memory out of 5000000
- 27739 multiletter control sequences out of 15000+600000
- 554509 words of font info for 76 fonts, out of 8000000 for 9000
+ 13098 strings out of 482820
+ 195911 string characters out of 5957805
+ 495533 words of memory out of 5000000
+ 27786 multiletter control sequences out of 15000+600000
+ 559092 words of font info for 88 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
  44i,12n,47p,1573b,482s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/elisa/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti0900.600
-pk> </home/elisa/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi1000.60
-0pk> </home/elisa/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.6
-00pk> </home/elisa/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.
-600pk> </home/elisa/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx0900
-.600pk> </home/elisa/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx120
-0.600pk> </home/elisa/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm10
+ </home/elisa/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600
+pk> </home/elisa/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0600.60
+0pk> </home/elisa/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti0900.6
+00pk> </home/elisa/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi1000.
+600pk> </home/elisa/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700
+.600pk> </home/elisa/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti100
+0.600pk> </home/elisa/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx09
 00.600pk> </home/elisa/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1
-440.600pk> </home/elisa/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx
-2074.600pk> </home/elisa/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecr
-m1000.600pk> </home/elisa/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ec
-bx1000.600pk> </home/elisa/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/e
-crm0900.600pk> </home/elisa/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/
-ecrm1200.600pk> </home/elisa/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec
-/ecbx2488.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmsy7.pfb>
-Output written on build/principal.pdf (57 pages, 1402858 bytes).
+200.600pk> </home/elisa/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm
+1000.600pk> </home/elisa/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecb
+x1440.600pk> </home/elisa/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ec
+bx2074.600pk> </home/elisa/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/e
+crm1000.600pk> </home/elisa/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/
+ecbx1000.600pk> </home/elisa/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec
+/ecrm0900.600pk> </home/elisa/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/e
+c/ecrm1200.600pk> </home/elisa/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/
+ec/ecbx2488.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex1
+0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on build/principal.pdf (64 pages, 1516910 bytes).
 PDF statistics:
- 1617 PDF objects out of 1728 (max. 8388607)
- 1018 compressed objects within 11 object streams
- 234 named destinations out of 1000 (max. 500000)
- 1015 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1801 PDF objects out of 2073 (max. 8388607)
+ 1150 compressed objects within 12 object streams
+ 269 named destinations out of 1000 (max. 500000)
+ 1118 words of extra memory for PDF output out of 10000 (max. 10000000)
 
