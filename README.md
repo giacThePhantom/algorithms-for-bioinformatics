@@ -18,8 +18,8 @@ See this [Github gist](https://gist.github.com/giacThePhantom/e080a777782754542d
  - [x] 10_CLUSTAL-W.pdf
  - [ ] 11_T-COFFEE.pdf
  - [x] 12_Protein_profiles_with_HMMs.pdf
- - [ ] 13_Phylo_fm.pdf
- - [ ] 14_Phylo_MP.pdf
+ - [x] 13_Phylo_fm.pdf
+ - [x] 14_Phylo_MP.pdf
  - [ ] 15_Phylo_ML.pdf
 
 
