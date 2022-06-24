@@ -6,7 +6,7 @@
 	FASTA is a derivative of FASTP and can be used to search protein or DNA sequence data bases and compare a protein sequence to a DNA one by translating the DNA one as it is searched.
 	FASTA includes an additional step in the calculation of the initial pairwise similarity score that allows multiple regions of similarity to be joined to increase the score of related sequences.
 	RDF2 can be used to evaluate the significance of similarity score with a shuffling method that preserves local sequence composition.
-	LFASTA can display all the regions of local similarity with scores greater than a threshold that can be displayed a graphic matrix plot.
+	LFASTA can display all the regions of local similarity with scores greater than a threshold that can be displayed as a graphic matrix plot.
 
 	\subsection{Introduction}
 	There is a trade-off between sensitivity and selectivity in biological sequence comparison: methods that can detect more distantly related sequences (increased sensitivity) frequently increase the similarity scores of unrelated sequences (decreased selectivity).
@@ -29,7 +29,7 @@
 		This is the initial region.
 
 		\subsubsection{Third step - ranking}
-		The best scoring initial region is used to characterized pair-wise similarity and the initial scores are used to rank the library sequences.
+		The best scoring initial region is used to characterize pair-wise similarity and the initial scores are used to rank the library sequences.
 		FASTA checks if several initial regions may be joined together.
 		Given the location, their scores and a joining penalty, FASTA calculates an optimal alignment of initial regions as a combination of compatible regions with maximal score.
 		The resulting score is used to rank the library sequences.
@@ -47,10 +47,10 @@
 	Starting at the end of the initial region, an optimization proceeds in the reverse direction until all possible alignment scores have gone to zero.
 	The maximal local similarity score in the reverse direction is used to start a second optimization that proceeds in the forward direction.
 	An optimal path starting from the forward maximum is displayed.
-	The local homologies can be displayed as sequence alignments or on a two-dimensional graphic matrix sty.
+	The local homologies can be displayed as sequence alignments or on a two-dimensional graphic matrix style.
 	The maximal local similarity score in the reverse direction is used to start a second optimization that proceeds in the forward direction.
 	An optimal path starting from the forward maximum is displayed.
-	The local homologies can be displayed as sequence alignments or on a two-dimensional graphic matrix style plot
+	The local homologies can be displayed as sequence alignments or on a two-dimensional graphic matrix style plot.
 
 	\subsection{Statistical significance}
 	To evaluate the statistical significance of an alignment RDF2 is used.

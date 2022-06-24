@@ -10,10 +10,10 @@
 	\subsection{Introduction}
 	Classical alignment tools minimize the evolutionary distance or maximise the similarity between two compared sequences.
 	The cost of this alignment is a measure of similarity.
-	Dynamic programming algorithm are unfeasible due to the large searching space.
+	Dynamic programming algorithms are unfeasible due to the large searching space.
 	Rapid heuristic algorithms can make the search faster, but the measure of similarity is not explicitly defined, like in the FASTP program.
 	This approach however have been useful in identifying many distant but biologically significant relationships.
-	BLAST employs a measure based on well-define measure scores approximating the results obtained by dynamic programming, creating a process an order of magnitude faster than existing heuristic algorithms.
+	BLAST employs a measure based on well-defined measure scores approximating the results obtained by dynamic programming, creating a process an order of magnitude faster than existing heuristic algorithms.
 
 \section{Methods}
 
@@ -38,14 +38,14 @@
 
 	\subsection{Rapid approximation of MSP scores}
 	Because only a handful in a database of thousands of sequences will be homologous to the query, only the sequence entries with MSP scores over some cutoff score $S$ are of interest.
-	THese inlcude those sharing highly significant similarity with the query and some borderlines.
-	The biological significance of high scoring sequences may be inferred on the bases of the similarity socre.
+	These include those sharing highly significant similarity with the query and some borderlines.
+	The biological significance of high scoring sequences may be inferred on the bases of the similarity score.
 
 		\subsubsection{MSP score estimates}
 		The highest MSP score $S$ at which chance similarities are likely to appear can be estimated.
-		BLAST minimizes the time spent on sequence regions whose similarity with the query has little chance of exceeding this core.
+		BLAST minimizes the time spent on sequence regions whose similarity with the query has little chance of exceeding this score.
 		Let a word pair be a segment pair of fixed length $w$.
-		THe main strategy is to seek only segment pairs that contain a word pair with a score of at least $T$.
+		The main strategy is to seek only segment pairs that contain a word pair with a score of at least $T$.
 		Scanning through a sequence, whether it contains a word of length $w$ that can pair with the query with a score greater or equal to the threshold $T$ can be quickly assessed.
 		Any such hit is extended to determine if it is contained within a segment pair whose score is greater than or equal to $S$.
 		The lower $T$, the greater the chance that a segment pair with a score of at least $S$ will contain a word pair with a score of at least $T$.
@@ -54,7 +54,7 @@
 
 	\subsection{Implementation}
 	The algorithm consists of three steps: compiling a list of high-scoring words, scanning the database for hits and extending hits.
-	This vary on whether the database contains proteins or DNA>
+	This vary on whether the database contains proteins or DNA.
 	For proteins the list consists of all words or $w-mers$ that score at least $T$ when compared to some word in the query sequence: a query word may be represented by no words in the list.
 	For useful results 50 words in the list for every residue in the query sequence.
 
@@ -80,7 +80,7 @@
 		For DNA a simpler word list is used.
 		A query sequence of length $n$ yields a list of $n-w+1$ words.
 		The database is compressed packing $4$ nucleotides in a single byte using an auxiliary table to delimit the boundaries.
-		Assuming $w\ge 11$ each hit must contain an $8$-her hit that lies on a byte boundary.
+		Assuming $w\ge 11$ each hit must contain an $8$-mer hit that lies on a byte boundary.
 		This can allow to scan the database byte-wise and increase the speed $4$-fold.
 
 		\subsubsection{Dealing with locally biased composition and repeated sequence element}
@@ -107,7 +107,7 @@
 	Two sequences that share several distinct regions can be detected as significantly related.
 
 		\subsubsection{Distribution of high-scoring segment pairs}
-		It is of interest to know what proportion of segment pairs with a given score contain a word pair of length $w$ with a score of ta least $T$.
+		It is of interest to know what proportion of segment pairs with a given score contain a word pair of length $w$ with a score of at least $T$.
 		For MSP arising from the comparison of random sequences a limiting distribution is provided.
 		The probability $q$ that a segment pair will fail to contain a word pair with score $T$ should depend exponentially upon the score of the MSP.
 		Because the frequencies of paired letters in MSP approaches a limiting distribution, the expected length of an MSP grows linearly with its score.
@@ -126,7 +126,7 @@
 			\end{itemize}
 		\end{multicols}
 
-		The time for the last is proportional to the number of its, which depends on $w$ and $T$.
+		The time for the last is proportional to the number of hits, which depends on $w$ and $T$.
 
 		\subsubsection{Choice of $w$}
 		Given a random protein model and a set of substitution scores it is simple to calculate the probability that two random words of length $w$ will have a score of at least $T$, or the probability of a hit arising from an arbitrary pair of words in the query and database.
@@ -155,12 +155,10 @@
 
 	\subsection{Performance of BLAST with homologous sequences}
 	BLAST's great utility is for finding high-scoring MSP quickly.
-	THe overall performance depend upon the distribution of MSP scores for those sequences related on the query.
+	The overall performance depend upon the distribution of MSP scores for those sequences related on the query.
 	The bulk of the MSP that are distinguishable from chance have a high enough score to be found readily even using relatively high values for $T$.
 	In each instance the threshold $S$ is chosen to include scores in the borderline region.
 
 	\subsection{Comparison of two long DNA sequences}
 	With smaller values of $w$ more alignments are found.
 	The use of a smaller $w$ provides no new information.
-
-\section{Conclusion}

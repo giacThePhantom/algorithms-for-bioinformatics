@@ -2,7 +2,7 @@
 
 \section{Introduction}
 
-	\subsection{Abstrac}
+	\subsection{Abstract}
 	The most used substitution matrix with scores for all possible exchanges of one amino acid is based on the Dayhoff model of evolutionary rates.
 	This work proposes a different approach from blocks of aligned sequence segments, leading to improvement in alignments and in searches.
 
@@ -39,10 +39,10 @@
 	This table is used to compute the odds ratio matrix between the observed frequencies and the expected one.
 
 	\subsection{Computing a logarithm of odds matrix}
-	Let the total number of amino acid pairs $i,j$ for each entry of the frequency table be $f-{ij}$.
+	Let the total number of amino acid pairs $i,j$ for each entry of the frequency table be $f_{ij}$.
 	Then the observed probability of occurrence for each $i,j$ pair is:
 
-	$$q_{ij} = \frac{f_{ij}}{\sum\limits_{i=1}^{20}\sum\limits_{j=1}^if_{iJ}}$$
+	$$q_{ij} = \frac{f_{ij}}{\sum\limits_{i=1}^{20}\sum\limits_{j=1}^if_{ij}}$$
 
 	The expected probability of occurrence for each pair is computed following the occurrence of the $ith$ amino acid in a $i,j$ pair:
 
@@ -51,11 +51,11 @@
 	The expected probability of occurrence $e_{ij}$ for each $i,j$ pair is then $p_ip_j$ for $i=j$ and $p_ip_j + p_jp_i = 2p_ip_j$ for $i\neq j$.
 	An odds ratio matrix is computed such that each entry is $\frac{q_{ij}}{e_{ij}}$.
 	A lod (logarithm of odds) is then calculated in bit units as $s = \log_2\big(\frac{q_{ij}}{e_{ij}}\big)$.
-	If the observed frequencies are as expected $s_{ij} = 0$, if less $s_{ij} < 0$< if more $s_{ij} > 0$/
+	If the observed frequencies are as expected $s_{ij} = 0$, if less $s_{ij} < 0$, if more $s_{ij} > 0$.
 	Lod ratios are multiplied by a $2$ scaling factor and rounded to the nearest integer value to produce the block substitution matrix BLOSUM.
 	The relative entropy or the average mutual information per amino acid pair is computed:
 
-	$$ H = \sum\limits_{i=1}^{20}\sum\limits-{j=1}^i q_{ij}\times s_{ij}$$
+	$$ H = \sum\limits_{i=1}^{20}\sum\limits_{j=1}^i q_{ij}\times s_{ij}$$
 
 	And the expected score in bit units:
 
@@ -70,11 +70,11 @@
 	\subsection{Constructing blocks data bases}
 	Protomat was used to build the block data base from $504$ non redundant groups of proteins.
 	Protomat uses an amino acid substitution matrix at two phases.
-	THe motif program uses a substitution matrix when individual sequences are aligned against sequence segments containing a candidate motif.
+	The motif program uses a substitution matrix when individual sequences are aligned against sequence segments containing a candidate motif.
 	The Motomat program uses a substitution matrix when a block is extended to either side of the motif region.
 	A unitary substitution matrix was used, next blosum was applied to the blocks and the resulting matrix was used to construct a second database.
-	Then blousm was applied to the second data base and the resulting matrix was used to construct version of blocks data base.
-	THe blosum program was applied to the final data base using a series of clustering percentages to obtain a family of lod substitution matrices.
+	Then blosum was applied to the second data base and the resulting matrix was used to construct version of blocks data base.
+	The blosum program was applied to the final data base using a series of clustering percentages to obtain a family of lod substitution matrices.
 	Similar matrices were obtained using PAM.
 
 	\subsection{Alignments and homology searches}
@@ -103,5 +103,5 @@
 	\subsection{Performance in searching for homology in sequence data banks}
 	The number of misses when searching was averaged in order to assess the overall searching performance of different matrices using blast, fasta and smith-waterman.
 	Blosum matrices performed better than the best PAM matrix.
-	BLOSUM improved detection of members od this family.
+	BLOSUM improved detection of members of this family.
 	The test was repeated with similar result of PAM for other protein families.
