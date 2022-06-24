@@ -1,7 +1,8 @@
+\graphicspath{{chapters/08/images}}
 \chapter{CLUSTAL-W}
 
 \section{Introduction}
-CLUSTAL-W program implements a number of improvements to progressive multiple alignment methods, which are aimed at improving sensitivity without sacrificing speed and efficiency.  
+CLUSTAL-W program implements a number of improvements to progressive multiple alignment methods, which are aimed at improving sensitivity without sacrificing speed and efficiency.
 Traditionally, one first aligns the most closely related sequences, gradually adding the more distant ones in order to obtain a faster alignment. This strategy works particularly well while working with sequences of different degrees of divergence.
 The main issues with the progressive approach are the local minimum problem and choice of alignment parameters.
 
@@ -13,36 +14,36 @@ Traditionally, one chooses one weight matrix and two gap penalties (one for open
 \\
 \\
 \noindent
-In order to tackle the alignment parameter choice problem, the authors of the paper dynamically vary the gap penalties in a position- and residue-specific manner. 
+In order to tackle the alignment parameter choice problem, the authors of the paper dynamically vary the gap penalties in a position- and residue-specific manner.
 
 \section{Alignment method}
-The basic multiple alignment algorithm consists of three main stages: 
+The basic multiple alignment algorithm consists of three main stages:
 \begin{enumerate}
 \item all pairs of sequences are aligned separately in order to calculate a distance matrix giving the divergence of each pair of sequences
 \item a guide tree is calculated  from the distance matrix;
-\item the sequences are progressively aligned according to the branching order in the guide tree. 
+\item the sequences are progressively aligned according to the branching order in the guide tree.
 \end{enumerate}
 
 \subsection{The distance matrix}
 In the original CLUSTAL programs,the pairwise distances were calculated using a fast approximate method.
-The scores are calculated as the number of k-tuple matches (runs of identical residues) in the best alignment between two sequences minus a fixed penalty for every gap. 
+The scores are calculated as the number of k-tuple matches (runs of identical residues) in the best alignment between two sequences minus a fixed penalty for every gap.
 A more accurate score from full dynamic programming using two gap penalties (opening and extending gaps) and a full amino acid weight matrix is proposed.
-The scores are computed as the number of identities in the best alignment divided by the number of residues compared.  
+The scores are computed as the number of identities in the best alignment divided by the number of residues compared.
 Both of these scores are initially calculated as per cent identity scores and are converted to distances by dividing by 100 and subtracting from $1.0$ to give number of differences per site.
 
 \subsection{The guide tree}
 The trees used to guide the final multiple alignment process are calculated from the distance matrix of step 1 using the Neighbour-Joining method.  This produces unrooted trees with branch lengths proportional to estimated divergence along each branch. The root is placed by a "mid-point" method at a position where the means of the branch lengths on either side of the root are equal. These trees are  also used to derive a weight for each sequence.  The weights are dependent upon the distance from the  root of  the tree, but sequences which have a common branch with other sequences share the weight derived from the shared branch.
 
 \subsection{Progressive alignment}
-Use a series of pairwise alignments to align larger and large groups of sequences, following the guide tree from the tips of the rooted tree towards the root. 
+Use a series of pairwise alignments to align larger and large groups of sequences, following the guide tree from the tips of the rooted tree towards the root.
 Each step consists of aligning two existing alignments or sequences; gaps that are present in older alignments remain fixed.
 In order to calculate the score between a position from one sequence or alignmentan done from another,the average of all the pairwise weight matrix scores from the amino acids in the two sets of sequences is used,i.e.if you align 2 alignments with 2 and 4 sequences respectively,the score at each position is the average of $8(2*4)$comparisons.
 If either set of sequences contains one or more gaps in one of the positions being considered, each gap versus a residue is scored as zero.
 When sequences are weighted, each weight matrix value is multiplied by the weights from the two sequences.
 
 \section{Improvements to progressive alignment}
-All of the remaining modifications apply only to the final progressive alignment stage. 
-Sequence weighting is relatively straightforward and is already widely used in profile searches, while the treatment of gap penalties is more complicated. 
+All of the remaining modifications apply only to the final progressive alignment stage.
+Sequence weighting is relatively straightforward and is already widely used in profile searches, while the treatment of gap penalties is more complicated.
 Initial gap penalties are calculated depending on the weight matrix, the similarity of the sequences and the length of the sequences.
 Then,an attempt is made to derive sensible local gap opening penalties at every position in each prealigned group of sequences that will vary as new sequences are added. The use of different weight matrices as the alignment progresses is novel and largely  bypasses the problem of initial choice of weight matrix.
 The final modification allows us to delay the addition of every divergent sequences until the end of the alignment process,when all of the more closely related sequences have already been aligned.
@@ -51,12 +52,12 @@ The final modification allows us to delay the addition of every divergent sequen
 Sequence weights are calculated directly from the guide tree.The weights are normalised  such that the biggest one is set to 1.0 and the rest are all less than 1.0.Groups of closely related sequences receive lowered weights because they contain  much duplicated information.Highly  divergent sequences without any close relatives receive high weights.These weights are used as simple multiplication factors for scoring positions from different sequences or prealigned groups of sequences.
 
 \subsection{Gap penalties}
-Gap opening penalty (GOP) and gap extension penalty (GEP) can be set by the user from a menu. 
+Gap opening penalty (GOP) and gap extension penalty (GEP) can be set by the user from a menu.
 The software then automatically attempts to choose appropriate gap penalties depending on following factors:
 \begin{itemize}
 \item \textbf{Dependence on the weight matrix}: the average score for two mismatched residues is used as a scaling factor for the GOP.
 \item \textbf{Dependence on the similarity of the sequences}: the per cent identity of the two sequences to be aligned is used to increase the GOP for closely related sequences and decrease it for more divergent sequences on a linear scale.
-\item \textbf{Dependence on the lengths of the sequences}: the scores for both true and false sequence alignments grow  with the length of the sequences. The log of the length of the shorter sequence is used to increase the GOP with sequence length. 
+\item \textbf{Dependence on the lengths of the sequences}: the scores for both true and false sequence alignments grow  with the length of the sequences. The log of the length of the shorter sequence is used to increase the GOP with sequence length.
 $$GOP \rightarrow {GOP+log[min(N,M)]}* (\text{average residue mismatch score}) * (\text{per cent identity scaling factor})$$
 \item \textbf{Dependence on the difference in the lengths of the sequences}: the GEP is modified depending on the difference between the lengths of the two sequences to be aligned. If one sequence is much shorter than the other,the GEP is increased to inhibit too many long gaps in the shorter sequence.
 $$GEP \rightarrow GEP * [1.0 + |log(N/M)|]$$

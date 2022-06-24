@@ -1,41 +1,42 @@
+\graphicspath{{chapters/07/images}}
 \chapter{Gapped-BLAST and PSI-BLAST}
 
     \section{Abstract}
     Gapped-BLAST uses a new criterion for triggering the extensions of word hits with a new heuristic for generating gapped alignments and it runs at approximately three times the speed of the original. In addition, a method is introduced for automatically combining statistically significant alignments produced by BLAST into a position-specific score matrix, and searching the database using this matrix. The resulting Position-Specific Iterated BLAST (PSI-BLAST) program runs at approximately the same speed per iteration as gapped BLAST, but in many cases is much more sensitive to weak but biologically relevant sequence similarities.
 
     \section{Gapped BLAST algorithm}
-    
+
         \subsection{Quick BLAST recap}
             \begin{itemize}
                 \item First, scan the database for words (three amino acids) with a score above a  threshold T. An aligned word pair is called a hit.
                 \item Then, to check if the hit lies within an alignment with a score high enough to be reported, extend the hit in both directions, until the alignment score has dropped below a threshold X.
             \end{itemize}
-        
+
         \subsection{Refinement of the original algorithm: two hits method} \label{refinement}
         The extension step is the computationally heavy task that takes 90\% of BLAST's execution time: the refinements is based on the observation that an High-scoring Segment Pair (HSP) of interest is usually longer than a single word pair and may contain multiple hits on the same diagonal within a relatively short distance (defined as the distance between their first coordinates). \\
         So, an \textsc{ungapped} extension is then triggered only when:two non-overlapping hits are
         found within distance of length A of one another on the same diagonal and any hit that overlaps the most recent one is ignored. Because we require two hits rather than one to invoke an extension, the threshold parameter T must be lowered to retain comparable sensitivity. \\
         A \textsc{gapped} extension is triggered only when the HSP generated has a normalized score higher than S{g} chosen so that no more
-        than about one extension is invoked per 50 database sequences. The gapped alignment is reported only if it has an E-value low enough to be of interest, where 
+        than about one extension is invoked per 50 database sequences. The gapped alignment is reported only if it has an E-value low enough to be of interest, where
         \begin{itemize}
             \item $$  E = N/2^{NormS} $$
             \item $$ NormS = \frac{\lambda * Score - ln(K)}{ln(2)} $$
             \item $Score$ is the nominal HSP score
             \item $ \lambda $ and $k$ are are two calculable parameters from the background probabilities P{i} that amino acids occur randomly at all positions and the substitution matrix $S_{ij}$
             \item To distinguish below whether a given set of parameters $\lambda$ and $K$ refer to gapped or ungapped alignments, the subscripts g and u are used respectively.
-            \item  When gaps are not allowed, a further important theorem states that within HSPs the aligned pair of letters (i,j) tends to occur with the \textbf{target frequency}: 
+            \item  When gaps are not allowed, a further important theorem states that within HSPs the aligned pair of letters (i,j) tends to occur with the \textbf{target frequency}:
             $$ q{ij} = P_iP_je^{\lambda_uS_{ij}} $$
         \end{itemize}
-        
-     
-        
+
+
+
     \section{PSI-BLAST}
-    
+
         \subsection{Introduction}
-        Database searches using position-specific score matrices, also called profiles or motifs, often are much better able to detect weak relationships than are database searches that use a simple sequence as query. To make motif searches more available, PSI-BLAST was created. It constructs a position-specific score matrix automatically from the output of a BLAST run, and modified BLAST to operate using such a matrix in the place of a simple query. It is more sensitive than the corresponding BLAST program and takes little more than the same time to run. 
+        Database searches using position-specific score matrices, also called profiles or motifs, often are much better able to detect weak relationships than are database searches that use a simple sequence as query. To make motif searches more available, PSI-BLAST was created. It constructs a position-specific score matrix automatically from the output of a BLAST run, and modified BLAST to operate using such a matrix in the place of a simple query. It is more sensitive than the corresponding BLAST program and takes little more than the same time to run.
         \subsection{Score matrix architecture}
         For proteins, a query of length L and a substitution matrix of dimension 20 × 20 are replaced by a position-specific matrix of dimension L × 20. Position-specific gap costs may be defined as well. As with pairwise sequence comparison, one may choose among finding the best global alignment of the matrix and the simple sequence, finding the best alignment of the complete matrix with a segment of the sequence, and finding the best local alignment of the matrix and sequence.
-            
+
         \subsection{Multiple alignment construction}
         \begin{itemize}
             \item all database sequence segments that have been aligned to the query with E-value below a threshold (by default set to 0.01) are collected;
@@ -43,14 +44,14 @@
             \item Pairwise alignment column that involve gap characters inserted into the query are simply ignored.
             \item  The raw multiple alignment $M$ is pruned to a simpler ‘reduced’ one for each column of M, so the reduced multiple alignment $M_c$ will in general vary from one column $C$ to the next. To construct $M_c$, we first specify the set $R$ of sequences it includes to be exactly those that contribute a residue to column $C$. We then define the columns of $M_c$ to be just those columns of $M$ in which all the sequences of R are represented.
         \end{itemize}
-        
+
         \subsection{Multiple alignment construction}
-        PSI-BLAST implements a modified version of the sequence weighting method of Henikoff. 
+        PSI-BLAST implements a modified version of the sequence weighting method of Henikoff.
         \begin{itemize}
             \item Gap characters are treated as a 21st distinct character;
             \item any column consisting of identical residues is ignored in calculating weights.
             \item N{c}, which is the alignment variability in the Henikoff method, is now the mean number of different residue types, including gap characters, observed in the various columns of M{C}.
-        \end{itemize} 
+        \end{itemize}
 
     \subsection{Target frequency estimation}
     The method uses the prior knowledge of amino acid relationships embodied in the substitution matrix $S_{ij}$ to generate residue pseudocount frequencies $g_i$, which are averaged with the observed frequencies f{i} to estimate the $Q_i$.
@@ -61,4 +62,3 @@
     $Q_i$ is then estimated by:
     $$ Q_i = \frac{\alpha f_i + \beta g_i }{\alpha + \beta}$$ where $\alpha$ and $\beta$ are the relative weights given to observed and
     pseudocount residue frequencies.
-

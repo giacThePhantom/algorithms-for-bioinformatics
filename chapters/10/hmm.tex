@@ -1,8 +1,8 @@
-\graphicspath{{chapters/images/}}
+\graphicspath{{chapters/10/images/}}
 \chapter{Protein profiles with HMMs}
 
 \section{Introduction}
-An alignment of two or more sequences can be used to infer the evolutionary relationships between sets of protein (or nucleic acid) sequences and eventually predict their 3D structure. 
+An alignment of two or more sequences can be used to infer the evolutionary relationships between sets of protein (or nucleic acid) sequences and eventually predict their 3D structure.
 In order to obtain meaningful results, the accuracy of the alignment must be as high as possible.
 Consider a family of protein sequences that all have a common three-dimensional structure, for example, the family of globins. A \textbf{profile} of globins can be thought of as a statistical model for the family of globins, in that for any sequence of amino acids, it defines a probability for that sequence, such that globin sequences tend to have much higher probabilities than non-globin sequences.
 The aim of this paper is to build a class of structures related to profiles and propose them as statistical models of protein families, such that we are able to "learn" or "estimate" the stochastic model directly from raw unaligned sequences.
@@ -10,25 +10,25 @@ Once the model is obtained, it is possible to use it to discriminate sequences i
 \\
 \\
 \noindent
-The proposed method of multiple alignment is quite different from conventional methods, which are usually based on pairwise alignments using the standard dynamic programming scheme with gap penalties. 
-Such alignments often depend strongly on the particular values of the parameters required by the method, in particular the gap penalties. Furthermore, the same penalties are used for both fairly conserved regions and highly variable regions; substitutions, insertions, or deletions in a region of high conservation should ideally be penalized more than in a variable region.  The statistical model here proposed corresponds to multiple alignment with variable penalties, depending on the position and learned from the data itself. 
+The proposed method of multiple alignment is quite different from conventional methods, which are usually based on pairwise alignments using the standard dynamic programming scheme with gap penalties.
+Such alignments often depend strongly on the particular values of the parameters required by the method, in particular the gap penalties. Furthermore, the same penalties are used for both fairly conserved regions and highly variable regions; substitutions, insertions, or deletions in a region of high conservation should ideally be penalized more than in a variable region.  The statistical model here proposed corresponds to multiple alignment with variable penalties, depending on the position and learned from the data itself.
 \\
 \\
 \noindent
-The type of statistical model is a hidden Markov model (HMM, or simply “model” for short). The HMM we build identifies a set of positions that describe the (more-or-less) conserved first-order structure in the sequences. 
-In biological terms, this corresponds to identifying the core elements of homologous molecules. 
-Each of these positions may be viewed as corresponding to a column in a multiple alignment of the sequences, or to a position in space, Often not all positions are modeled, but only the ones with the most significantly nonrandom statistics. 
-As in a profile, for each position in the model, the relative probabilities of the different amino acids in that position are given, as is the probability that the amino acid at that position is deleted. For any amino acid x,the negative logarithm of the probability of x at a given position in the model can be interpreted as a penalty for an alignment that puts z in this position, and the negative logarithm of the probability of deletion at that position can be similarly interpreted as a penalty for an alignment that puts a “ - ” (gap character) in that position. Furthermore, for each pair of adjacent positions, the model includes the probability for initiating an insertion of one or more amino acids between these positions, and the probability for extending it. 
+The type of statistical model is a hidden Markov model (HMM, or simply “model” for short). The HMM we build identifies a set of positions that describe the (more-or-less) conserved first-order structure in the sequences.
+In biological terms, this corresponds to identifying the core elements of homologous molecules.
+Each of these positions may be viewed as corresponding to a column in a multiple alignment of the sequences, or to a position in space, Often not all positions are modeled, but only the ones with the most significantly nonrandom statistics.
+As in a profile, for each position in the model, the relative probabilities of the different amino acids in that position are given, as is the probability that the amino acid at that position is deleted. For any amino acid x,the negative logarithm of the probability of x at a given position in the model can be interpreted as a penalty for an alignment that puts z in this position, and the negative logarithm of the probability of deletion at that position can be similarly interpreted as a penalty for an alignment that puts a “ - ” (gap character) in that position. Furthermore, for each pair of adjacent positions, the model includes the probability for initiating an insertion of one or more amino acids between these positions, and the probability for extending it.
 Other things are also included, such as the probability that an amino acid at a particular position is deleted, given that the amino acid at the previous position was deleted. This helps model the higher probability of consecutive deletions/insertions in certain regions. By taking negative logarithms as above, these methods provide a very flexible, position-dependent form of initiation and extension gap penalties.
 
 \section{The protein HMM}
 A hidden Markov Model describes a series of observations by a “hidden” stochastic process - a Markov process.
-In this paper we are proposing an HMM similar to the ones used in speech to model protein families - or families of other molecular sequences like DNA and RNA. When modeling proteins, the observations are the amino acids in the primary sequence of a protein. A model for a set of proteins is one that assigns high probability to the sequences in that particular set. 
+In this paper we are proposing an HMM similar to the ones used in speech to model protein families - or families of other molecular sequences like DNA and RNA. When modeling proteins, the observations are the amino acids in the primary sequence of a protein. A model for a set of proteins is one that assigns high probability to the sequences in that particular set.
 \\
 \\
 \noindent
 The HMM contains a sequence of $M$ states that we call match states. These correspond to positions in a protein or columns in a multiple alignment. Each of these states can generate a letter $x$ from the 20- letter amino acid alphabet according to a distribution $P(x|m_k), k= 1...M$.  For each match state $m_k$ there is a delete state $d_k$ that does not produce any amino acid, it is a “dummy” state, shown as circles. Finally, there are insertion states between all the match states, $M + 1$ in total, shown as diamonds. They generate amino acids in exactly the same way as the match states, but they use probability distributions $P ( x | i_k )$ .
-From each state, there are three possible transitions to other states: transitions into match or delete states always move forward in the model, whereas transitions into insertion states do not. Multiple insertions between match states can occur because of the self loop on the insert state, meaning that a transition from an insert state to itself is possible. The transition probability from state $s_1$ to $s_2$ is called $\mathcal{T}(s_2|s_1)$. 
+From each state, there are three possible transitions to other states: transitions into match or delete states always move forward in the model, whereas transitions into insertion states do not. Multiple insertions between match states can occur because of the self loop on the insert state, meaning that a transition from an insert state to itself is possible. The transition probability from state $s_1$ to $s_2$ is called $\mathcal{T}(s_2|s_1)$.
 The overall model is reported in figure \ref{fig:HMM}.
 
 \begin{figure}[ht]
@@ -37,7 +37,7 @@ The overall model is reported in figure \ref{fig:HMM}.
 		\caption{\label{fig:HMM}}
 	\end{figure}
 \noindent
-A sequence can be generated by a “random walk” through the model as follows: beginning at state $m_0$ (BEGIN) choose a transition  randomly according to the probabilities $\mathcal{T}(m_1|m_0),\mathcal{T}(d_1|m_0),\mathcal{T}(i_0|m_0)$. If $m_1$ is chosen, generate the first amino acid $x_1$ from the probability distribution $P(xlm_1)$, and choose a transition to the next state according to probabilities $\mathcal{T}(\cdot |m_1)$where $"\cdot"$ indicates any possible next state. Continue in this manner all the way to the END state, generating a sequence of amino acids $x_1, \dots, x_L$by following a path of states $y_0 \dots y_{N+1}$ through the model, where $y_0 = m_0$ (the BEGIN state) and $y{_N+1}=m_{M+1}$ (the END state). Because the delete states do not produce any amino acid, $N$ is larger than or equal to $L$. 
+A sequence can be generated by a “random walk” through the model as follows: beginning at state $m_0$ (BEGIN) choose a transition  randomly according to the probabilities $\mathcal{T}(m_1|m_0),\mathcal{T}(d_1|m_0),\mathcal{T}(i_0|m_0)$. If $m_1$ is chosen, generate the first amino acid $x_1$ from the probability distribution $P(xlm_1)$, and choose a transition to the next state according to probabilities $\mathcal{T}(\cdot |m_1)$where $"\cdot"$ indicates any possible next state. Continue in this manner all the way to the END state, generating a sequence of amino acids $x_1, \dots, x_L$by following a path of states $y_0 \dots y_{N+1}$ through the model, where $y_0 = m_0$ (the BEGIN state) and $y{_N+1}=m_{M+1}$ (the END state). Because the delete states do not produce any amino acid, $N$ is larger than or equal to $L$.
 \\
 \\
 \noindent
@@ -70,7 +70,7 @@ The prior on the models contains prior beliefs on what a model should be like, a
 
 \subsection{The distance from sequence to model}
 First, we need a way to calculate the probability $\operatorname{Prob}(\text{sequences|model})$. Call the sequences $s^1 \dots s^n$.
-Then, assuming independence 
+Then, assuming independence
 \begin{equation}\label{eq:p_seq_model}
 \operatorname{Prob} (s^{1} \ldots s^{n} \mid \text { model }) = \prod_{\mu=1}^{n} \operatorname{Prob}(s^{\mu} \mid \text { model }) .
 \end{equation}
@@ -103,7 +103,7 @@ It proceeds as follows:
 \item Reestimate the transition probabilities and amino acid probabilities in the match and insertion states from
 
 \begin{equation}\label{eq:T}
-\mathcal{T}\left(y^{\prime} \mid y\right) =\frac{n\left(y^{\prime} \mid y\right)+R\left(y^{\prime} \mid y\right)}{n(y)+\sum_{y^{\prime \prime}} R\left(y^{\prime \prime} \mid y\right)} 
+\mathcal{T}\left(y^{\prime} \mid y\right) =\frac{n\left(y^{\prime} \mid y\right)+R\left(y^{\prime} \mid y\right)}{n(y)+\sum_{y^{\prime \prime}} R\left(y^{\prime \prime} \mid y\right)}
 \end{equation}
 \begin{equation}\label{eq:P}
 \mathcal{P}(x \mid y) =\frac{m(x \mid y)+R(x \mid y)}{n(y)+\sum_{i=1}^{20} R\left(a_{i} \mid y\right)}
@@ -115,30 +115,30 @@ Here $R(y'|y)$ and $R(x|y)$ represent a regularizer, which comes from the model 
 The main difference between this method, which uses the Viterbi approximation, and the standard Baum-Welch algorithm is that in the latter all paths (not just the most probable) are considered, but weighted according to their probability.
 
 \subsection{Choosing the length of the model}
-A simple heuristic selects a good model length, and even helps in the problem of local minima. 
-After learning, if more than a fraction $\gamma_{del}$ of the optimal paths of the sequences choose $d_k$, the delete state at position k,that position is removed from the model. 
+A simple heuristic selects a good model length, and even helps in the problem of local minima.
+After learning, if more than a fraction $\gamma_{del}$ of the optimal paths of the sequences choose $d_k$, the delete state at position k,that position is removed from the model.
 Similarly, if more than a fraction $\gamma_{ins}$ msake insertions at position k (in state $i_k$), a number of new positions are inserted into the model after position k. This number is equal to the average number of insertions the sequences make at that position. After these changes in the model, it is retrained, and this cycle is repeated until no more changes are needed. We call this “model surgery”. Currently we choose $\gamma_{del}$ and $\gamma_{ins}$ to be $1/2$.
 
 \subsection{Over-fitting and regularization}
 A model with too many free parameters cannot be estimated well from a relatively small data set of training sequences. If we try to estimate such a model, we run into the problem of overfitting.
 One way to deal with this problem is to control the effective number of free parameters in the model by regularization, which can be viewed as a way of implementing MAP estimation.
-In our application of regularization to HMMs, the regularizer is closely related to the model prior, and it can be used to bias the model in some specific direction. The regularizer ($R$)is added to the frequency counts in \ref{eq:T} and  \ref{eq:P} as if we actually saw more than $n(y’|y)$ or $n(x|y)$ events. 
-For instance, in our models we believe a prior $i$ that sequences should spend most of their time in the match states on the main line of the HMM, so we incorporate this belief into the model prior by setting $R(m_i|y)$to a large value compared to the regularizer $R(y|m_i)$,which is added to transitions diverging from the main line. 
-In so doing, these parameters become less adjustable, and as a result we are less prone to overfit the data. 
-We also tend to get better models because we are encouraging the learning algorithm to first explore the more a prior $i$ likely part of model space when trying to fit the data. 
+In our application of regularization to HMMs, the regularizer is closely related to the model prior, and it can be used to bias the model in some specific direction. The regularizer ($R$)is added to the frequency counts in \ref{eq:T} and  \ref{eq:P} as if we actually saw more than $n(y’|y)$ or $n(x|y)$ events.
+For instance, in our models we believe a prior $i$ that sequences should spend most of their time in the match states on the main line of the HMM, so we incorporate this belief into the model prior by setting $R(m_i|y)$to a large value compared to the regularizer $R(y|m_i)$,which is added to transitions diverging from the main line.
+In so doing, these parameters become less adjustable, and as a result we are less prone to overfit the data.
+We also tend to get better models because we are encouraging the learning algorithm to first explore the more a prior $i$ likely part of model space when trying to fit the data.
 In the extreme case, the regularizers $R(\cdot | \cdot)$can be such large numbers that the parameters simply become “hardwired”. We have found that the method works best when very large regularizers $R(x|y)$, proportional to the relative overall frequencies of amino acids in globin sequences, are used when $y$ is an insert state. This has the effect of fixing the distributions in the insert states, rather than trying to estimate them from the training sequences.
 
 \section{Conclusions}
-The method utilizes the tremendous amount of information contained in many sequences from the same family. 
-For the simple case of globins, with this method it is possible to obtain multiple alignments that mirror structural alignments using only the unaligned primary sequences as input. 
+The method utilizes the tremendous amount of information contained in many sequences from the same family.
+For the simple case of globins, with this method it is possible to obtain multiple alignments that mirror structural alignments using only the unaligned primary sequences as input.
 The method requires that many sequences be available from the family one wants to model; since the number of sequences in the protein databases is growing rapidly, this may be less of a problem in the future.
-There are two possible answers to the problem of small sets of training sequences. 
+There are two possible answers to the problem of small sets of training sequences.
 \\
 \\
 \noindent
-The first is to add more prior knowledge into the training process by starting with a better initial model, and by using more involved kinds of regularization. 
-The "soft tying" regularization method combines the idea of tying states in which the number of free parameters is reduced by having groups of states all share the same distribution on the output alphabet (the 20 amino acids in this case), and the idea of soft weight, in which the regularizer (in this case for the distribution of amino acids) is also adaptively modified during learning. 
-Even more complex, position-specific kinds of regularization are possible. 
+The first is to add more prior knowledge into the training process by starting with a better initial model, and by using more involved kinds of regularization.
+The "soft tying" regularization method combines the idea of tying states in which the number of free parameters is reduced by having groups of states all share the same distribution on the output alphabet (the 20 amino acids in this case), and the idea of soft weight, in which the regularizer (in this case for the distribution of amino acids) is also adaptively modified during learning.
+Even more complex, position-specific kinds of regularization are possible.
 Switching from the alphabet of the primary sequences to a different representation based more on the structural or chemical properties of the amino acids in the sequence may also help.
 \\
 \\
@@ -147,8 +147,5 @@ The second answer is to give up trying to model the whole protein in cases where
 \\
 \\
 \noindent
-Finally, when a relatively large number of sequences are available, it is sometimes possible to get better results by dividing these sequences into clusters of similar sequences, and training a different model for each cluster. 
-The partition into clusters can also be done automatically by the EM algorithm during training, in a procedure known as mixture modeling. To implement this, we simply start with more than one model and force the models to “compete” for the sequences, and adapt to fit only the ones they “won”. 
-
-
-
+Finally, when a relatively large number of sequences are available, it is sometimes possible to get better results by dividing these sequences into clusters of similar sequences, and training a different model for each cluster.
+The partition into clusters can also be done automatically by the EM algorithm during training, in a procedure known as mixture modeling. To implement this, we simply start with more than one model and force the models to “compete” for the sequences, and adapt to fit only the ones they “won”.

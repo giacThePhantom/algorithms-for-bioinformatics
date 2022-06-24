@@ -1,4 +1,4 @@
-\graphicspath{{chapters/13/}}
+\graphicspath{{chapters/11/images}}
 \chapter{Construction of phylogenetic trees}
 \emph{A method based on \textbf{mutation distances} as estimated from cytochrome \textit{c} sequences is of general applicability (1967)}
 
@@ -52,13 +52,13 @@ In phylogeny both are used, but it is necessary to fix some key aspects that def
 \end{itemize}
 
 \section{Determining the mutation distance}
-The mutation distance between two cytochromes is defined here as the minimal number of nucleotides that would need to be altered in order for one cytochrome to code for the other. This distance is determined by making pair wise comparison of homologous amino acids. For each pair a mutation value is taken from a pre-defined table, which gives the minimum number of nucleotide changes required to convert the coding from one amino acid to the other. 
+The mutation distance between two cytochromes is defined here as the minimal number of nucleotides that would need to be altered in order for one cytochrome to code for the other. This distance is determined by making pair wise comparison of homologous amino acids. For each pair a mutation value is taken from a pre-defined table, which gives the minimum number of nucleotide changes required to convert the coding from one amino acid to the other.
 \\
-For each possible pairing of cytochromes, the 110 mutation values found are summed to obtain the minimal mutation distance. 
-The basic approach tot he construction of the tree is illustrated in figure \ref{fig:1}, which shows three hypothetical proteins, A, B and C, and their mutation distances. There are two fundamental problems: 
+For each possible pairing of cytochromes, the 110 mutation values found are summed to obtain the minimal mutation distance.
+The basic approach tot he construction of the tree is illustrated in figure \ref{fig:1}, which shows three hypothetical proteins, A, B and C, and their mutation distances. There are two fundamental problems:
 
 \begin{itemize}
-\item Which pair to join first? As a first approximation, one solves it by simply choosing the pair with the smallest mutation distance, which in this case is A and B, with a distance of 24. A and B are shown connected at the lower apex. 
+\item Which pair to join first? As a first approximation, one solves it by simply choosing the pair with the smallest mutation distance, which in this case is A and B, with a distance of 24. A and B are shown connected at the lower apex.
 \item What are the lengths of legs \textit{a, b} and \textit{c}? One notes that the distance from A to C, 28, is 4 less than the distance form B to C. Meaning, there must have bee at least 4 countable mutations in the descent of B from the lower apex than in the descent of A.
 \end{itemize}
 
@@ -70,15 +70,15 @@ The basic approach tot he construction of the tree is illustrated in figure \ref
 	\end{figure}
 
 
-When information from more than three protein is utilized, the basic procedure is the same, except that initially each protein is assigned to its own subset. One then simply joins two subsets to create a single, more comprehensive subset, and the process is repeated until all proteins are members of  a single subset. 
-A phylogenetic tree is but a grphical representaion of the order in which the subsets were joined. 
+When information from more than three protein is utilized, the basic procedure is the same, except that initially each protein is assigned to its own subset. One then simply joins two subsets to create a single, more comprehensive subset, and the process is repeated until all proteins are members of  a single subset.
+A phylogenetic tree is but a grphical representaion of the order in which the subsets were joined.
 \\
-In the case of this study, they started with 20 subsets, each subset consisting of a single cytochrome \textit{c} amino acid sequence. One arbitrarily accepts, from among all the possible pairings examined, that assigned of protein subsets to sets A, B and C which provides the lowest average mutation distance from A to B. The leg lengths are then recorded. Henceforth the proteins of A and B so joined are treated as a single subset, and the entire procedure described in the preceding paragraph is repeated.  Thus the number of proteins($N$) is reduced by 1 at each cycle. The tree will be produced after $N-1$ joinings. 
+In the case of this study, they started with 20 subsets, each subset consisting of a single cytochrome \textit{c} amino acid sequence. One arbitrarily accepts, from among all the possible pairings examined, that assigned of protein subsets to sets A, B and C which provides the lowest average mutation distance from A to B. The leg lengths are then recorded. Henceforth the proteins of A and B so joined are treated as a single subset, and the entire procedure described in the preceding paragraph is repeated.  Thus the number of proteins($N$) is reduced by 1 at each cycle. The tree will be produced after $N-1$ joinings.
 
 \subsection{Genetic distances}
 \emph{From slides, lec 13}
 \\
-For the phylogenetic distinction of two sequences, it is necessary to know how much they diverge. We therefore need an objective parameter and a calculable, defined genetic distance. 
+For the phylogenetic distinction of two sequences, it is necessary to know how much they diverge. We therefore need an objective parameter and a calculable, defined genetic distance.
 For conserved nucleic acids, the number of percentage substitutions observed after multiple alignments
 
 \begin{equation}
@@ -97,13 +97,13 @@ For proteins, aligned with a replacement matrix, it is often used the approximat
 d =  \frac{(Sobs - Srand)}{(Smax -Srand}
 \end{equation}
 
-With Sobs the score of the alignment, Smax average of the scores of the alignments of all proteins with themselves, Srand score expected for sequences of the same length and composition. 
+With Sobs the score of the alignment, Smax average of the scores of the alignments of all proteins with themselves, Srand score expected for sequences of the same length and composition.
 
 \section{Testing alternative trees}
-Because of the arbitrary nature of the rule by which proteins were assigned to sets A and B, the initial tree will not necessarily represent the best use of the information. The solution provided by the authors is simply to construct another tree by assigning an alternative pair of protein subsets to sets A and B whenever the mutation distance between the two subsets is not greater by some arbitrary amount than that between the members of the initial pair used in constructing the initial phylogenetic tree. 
+Because of the arbitrary nature of the rule by which proteins were assigned to sets A and B, the initial tree will not necessarily represent the best use of the information. The solution provided by the authors is simply to construct another tree by assigning an alternative pair of protein subsets to sets A and B whenever the mutation distance between the two subsets is not greater by some arbitrary amount than that between the members of the initial pair used in constructing the initial phylogenetic tree.
 
 \subsection{Standard deviation}
-If the absolute difference between two such mutation distances $|(i,j)-(j,i)|$ is multiplied by $100$ and divided by (i,j), the result is the  of change from the input data. If such values are squared and the squares are summed over all values of $i < j$, the resultant sum ($\mathcal{E}$) may be used to obtain the percent "standard deviation" of the reconstructed values from the input mutation distances. The number of mutation distances summed is $N(N-1)/2$. The number is reduced by 1, divided into the sum $\mathcal{E}$ and the square root taken, the result is the percent "standard deviation". 
+If the absolute difference between two such mutation distances $|(i,j)-(j,i)|$ is multiplied by $100$ and divided by (i,j), the result is the  of change from the input data. If such values are squared and the squares are summed over all values of $i < j$, the resultant sum ($\mathcal{E}$) may be used to obtain the percent "standard deviation" of the reconstructed values from the input mutation distances. The number of mutation distances summed is $N(N-1)/2$. The number is reduced by 1, divided into the sum $\mathcal{E}$ and the square root taken, the result is the percent "standard deviation".
 
 \section{The statistically optimal tree}
 In testing phylogenetic alternatives, one is seeking to minimize the percent standard deviation.
@@ -114,7 +114,7 @@ A cautionary note may be derived from this. A wildly incorrect result could e ea
 
 \section{Phylogenetic relationships in trees}
 \emph{From slides, lec 13}
-\\ 
+\\
 The systems for building trees aims to discover how the sequences are in
 relation to each other: the data (the sequences themselves or distances) are used to create a system of equations that models "when" the sequences diverge (the nodes) and how extensive it is the separation separation (branches).
 
@@ -127,19 +127,3 @@ It starts from a theoretical tree in which the various OTUs are inserted, withou
 		\caption{}
 		\label{fig:ex1}
 	\end{figure}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
